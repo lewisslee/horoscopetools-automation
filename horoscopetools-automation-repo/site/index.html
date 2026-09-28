@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080611" />
+  <title>Horoscope — Free Birth Chart, Numerology &amp; Tarot Tools</title>
+  <meta name="description" content="Free birth chart (natal chart) calculator, Life Path number, Sun sign and daily tarot. Discover your astrology, numerology and tarot insights for self-growth — private, no sign-up." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://horoscopetools.com/" />
+
+  <meta property="og:title" content="Horoscope — Free Birth Chart, Numerology & Tarot Tools" />
+  <meta property="og:description" content="Calculate your free natal chart, Life Path number, Sun sign and daily tarot. Private, accurate and beautiful." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://horoscopetools.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+/* =========================================================
+   Horoscope — Unified Mystical / Tarot Design System
+   ========================================================= */
+:root{
+  --bg-0:#080611;
+  --bg-1:#120a26;
+  --bg-2:#1a1038;
+  --violet:#a986ff;
+  --violet-deep:#7c5cff;
+  --gold:#f0d088;
+  --gold-soft:#f4d58d;
+  --text:#f3eefe;
+  --muted:#d4ccf0;
+  --muted-2:#aaa0d4;
+  --line:rgba(169,134,255,.22);
+  --glass:rgba(22,14,44,.62);
+  --glass-2:rgba(14,9,30,.78);
+  --radius:18px;
+  --radius-sm:12px;
+  --shadow:0 18px 50px rgba(0,0,0,.45);
+  --glow-violet:0 0 0 1px rgba(169,134,255,.35), 0 12px 40px rgba(124,92,255,.25);
+  --glow-gold:0 0 0 1px rgba(233,196,106,.35), 0 12px 40px rgba(233,196,106,.18);
+  --font-display:"Cinzel", Georgia, "Times New Roman", serif;
+  --font-head:"Cormorant Garamond", Georgia, serif;
+  --font-body:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{
+  font-family:var(--font-body);
+  color:var(--text);
+  background:var(--bg-0);
+  line-height:1.65;
+  min-height:100vh;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--violet);text-decoration:none}
+img{max-width:100%}
+
+.bg-fixed{position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(1200px 800px at 78% -8%, rgba(124,92,255,.22), transparent 60%),
+    radial-gradient(900px 700px at 8% 100%, rgba(233,196,106,.14), transparent 55%),
+    radial-gradient(1400px 1000px at 50% 0%, var(--bg-2), transparent 70%),
+    linear-gradient(180deg, var(--bg-1) 0%, var(--bg-0) 70%);
+}
+.bg-moon{position:fixed;top:-120px;right:-90px;width:420px;height:420px;z-index:-2;pointer-events:none;
+  border-radius:50%;
+  background:radial-gradient(circle at 38% 38%, rgba(244,213,141,.35), rgba(169,134,255,.10) 45%, transparent 70%);
+  filter:blur(6px);}
+.bg-stars{position:fixed;inset:0;z-index:-2;pointer-events:none}
+.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:.5;
+  animation:twinkle 4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.18;transform:scale(.7)}50%{opacity:.85;transform:scale(1.15)}}
+
+.container{max-width:1080px;margin:0 auto;padding:0 22px}
+main{display:block}
+
+.site-nav{position:sticky;top:0;z-index:50;
+  background:linear-gradient(180deg, rgba(8,6,17,.92), rgba(8,6,17,.62));
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:var(--font-display);font-weight:700;font-size:1.25rem;letter-spacing:2px;
+  color:var(--gold-soft);display:flex;align-items:center;gap:10px}
+.brand .mark{font-size:1.4rem;filter:drop-shadow(0 0 8px rgba(233,196,106,.6))}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{padding:9px 14px;border-radius:999px;color:var(--muted);font-size:.95rem;font-weight:500;
+  transition:.2s;position:relative}
+.nav-links a:hover{color:var(--text);background:rgba(169,134,255,.12)}
+.nav-links a.active{color:var(--gold-soft);background:rgba(233,196,106,.10)}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;
+  width:42px;height:38px;cursor:pointer;color:var(--text);font-size:1.2rem}
+
+.hero{position:relative;text-align:center;min-height:60vh;display:flex;flex-direction:column;
+  justify-content:center;padding:70px 0 34px;overflow-x:clip;overflow-y:visible}
+.hero-mandala{position:absolute;left:50%;top:50%;width:min(760px,94vw);height:auto;z-index:10;
+  opacity:.22;pointer-events:none;transform:translate(-50%,-50%);
+  animation:spinMandala 140s linear infinite;
+  mix-blend-mode:screen;
+  transition:opacity .6s ease,filter .6s ease,mix-blend-mode 0s}
+.hero:hover .hero-mandala{opacity:.5;mix-blend-mode:normal;filter:drop-shadow(0 0 20px rgba(233,196,106,.4)) drop-shadow(0 0 36px rgba(169,134,255,.3))}
+.hero-mandala .zodiac-glyph{filter:drop-shadow(0 0 6px rgba(233,196,106,.6));transition:filter .6s ease}
+.hero:hover .hero-mandala .zodiac-glyph{filter:drop-shadow(0 0 12px rgba(255,215,140,.95)) drop-shadow(0 0 22px rgba(233,196,106,.7))}
+@keyframes spinMandala{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+.hero-stage{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto 1fr;
+  align-items:center;gap:18px;max-width:1000px;margin:0 auto}
+.tcard{filter:drop-shadow(0 18px 42px rgba(0,0,0,.55))}
+.tcard svg{display:block;width:100%;height:auto;border-radius:16px}
+.tcard-left{justify-self:end;width:clamp(96px,13vw,160px);transform:rotate(-9deg);
+  animation:floatCardA 7.5s ease-in-out infinite}
+.tcard-right{justify-self:start;width:clamp(96px,13vw,160px);transform:rotate(8deg);
+  animation:floatCardB 8.5s ease-in-out infinite}
+.tcard-back{position:absolute;left:50%;top:50%;width:clamp(120px,18vw,210px);z-index:1;
+  transform:translate(-50%,-50%) rotate(3deg);opacity:.45;pointer-events:none;
+  animation:floatCardC 12s ease-in-out infinite}
+@keyframes floatCardA{0%,100%{transform:rotate(-9deg) translateY(0)}50%{transform:rotate(-7deg) translateY(-18px)}}
+@keyframes floatCardB{0%,100%{transform:rotate(8deg) translateY(0)}50%{transform:rotate(11deg) translateY(-14px)}}
+@keyframes floatCardC{0%,100%{transform:translate(-50%,-50%) rotate(3deg) translateY(0)}50%{transform:translate(-50%,-50%) rotate(5deg) translateY(-22px)}}
+.hero-center{position:relative;z-index:3;max-width:480px;margin:0 auto}
+  .hero-center::before{content:"";position:absolute;left:50%;top:50%;width:130%;height:130%;
+    transform:translate(-50%,-50%);z-index:-1;border-radius:50%;
+    background:radial-gradient(closest-side, rgba(8,6,17,.55), rgba(8,6,17,.28) 60%, transparent 78%);
+    pointer-events:none}
+.hero-center .eyebrow{display:inline-block;padding:0 18px;position:relative}
+.hero-center .eyebrow::before,.hero-center .eyebrow::after{content:"\2726";position:absolute;top:50%;
+  transform:translateY(-50%);color:var(--gold);opacity:.7;font-size:.7rem}
+.hero-center .eyebrow::before{left:-2px}
+.hero-center .eyebrow::after{right:-2px}
+.scroll-cue{position:relative;z-index:2;margin-top:32px;display:flex;flex-direction:column;
+  align-items:center;gap:9px;color:var(--muted-2);font-family:var(--font-display);
+  letter-spacing:3px;font-size:.68rem;text-transform:uppercase}
+.scroll-cue .mouse{width:22px;height:36px;border:1.6px solid var(--line);border-radius:14px;position:relative}
+.scroll-cue .mouse::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;border-radius:3px;
+  background:var(--gold);transform:translateX(-50%);animation:scrollDot 1.9s ease-in-out infinite}
+@keyframes scrollDot{0%{opacity:0;top:7px}35%{opacity:1}100%{opacity:0;top:21px}}
+@keyframes floaty{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-14px)}}
+.eyebrow{font-family:var(--font-display);letter-spacing:4px;text-transform:uppercase;
+  font-size:.78rem;color:var(--gold);margin-bottom:14px}
+.hero h1{font-family:var(--font-head);font-weight:700;font-size:clamp(2.6rem,7vw,4.6rem);
+  line-height:1.02;color:#fff;text-shadow:0 4px 40px rgba(124,92,255,.45)}
+.hero h1 .accent{color:var(--gold-soft)}
+.hero p.lead{margin:18px auto 0;max-width:640px;color:var(--muted);font-size:1.12rem}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;
+  font-weight:600;font-size:1rem;cursor:pointer;border:1px solid transparent;transition:.22s;
+  font-family:var(--font-body)}
+.btn .arr{transition:.22s}
+.btn:hover .arr{transform:translateX(4px)}
+.btn-primary{background:linear-gradient(135deg,var(--gold) 0%, var(--gold-soft) 40%, var(--violet) 100%);
+  color:#1a1038;box-shadow:0 10px 34px rgba(233,196,106,.30), 0 0 0 1px rgba(244,213,141,.4) inset}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(233,196,106,.42)}
+.btn-ghost{background:rgba(169,134,255,.10);border-color:var(--line);color:var(--text)}
+.btn-ghost:hover{background:rgba(169,134,255,.20);transform:translateY(-2px)}
+.btn-block{width:100%;justify-content:center}
+
+.glass{background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.section{padding:54px 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 34px}
+.section-head h2{font-family:var(--font-head);font-weight:700;font-size:clamp(1.9rem,4vw,2.7rem);
+  color:#fff;line-height:1.1}
+.section-head p{color:var(--muted);margin-top:10px;font-size:1.05rem}
+
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.tool-card{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding:30px 22px;border-radius:var(--radius);background:var(--glass);
+  border:1px solid var(--line);box-shadow:var(--shadow);transition:.25s;overflow:hidden}
+.tool-card::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(120px 80px at 50% 0%, rgba(233,196,106,.12), transparent 70%);opacity:0;transition:.25s}
+.tool-card:hover{transform:translateY(-6px);border-color:rgba(233,196,106,.45);
+  box-shadow:var(--glow-gold);}
+.tool-card:hover::before{opacity:1}
+.tool-card .em{width:54px;height:54px;color:var(--gold);filter:drop-shadow(0 0 12px rgba(169,134,255,.35))}
+.tool-card .em svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round}
+.tool-card .t{font-family:var(--font-head);font-size:1.5rem;font-weight:700;color:#fff;margin-top:12px}
+.tool-card .d{color:var(--muted);font-size:.95rem;margin-top:6px}
+.tool-card .go{margin-top:16px;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;
+  color:var(--gold);font-family:var(--font-display);
+  display:inline-flex;align-items:center;gap:6px}
+.tool-card .go .arr{transition:.2s}
+.tool-card:hover .go .arr{transform:translateX(4px)}
+
+.calc-card{padding:30px;margin-top:8px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:22px}
+.tab{padding:11px 20px;border:1px solid var(--line);border-radius:999px;background:rgba(14,9,30,.5);
+  cursor:pointer;color:var(--muted);font-size:.96rem;font-weight:600;transition:.2s}
+.tab:hover{color:var(--text);border-color:rgba(169,134,255,.4)}
+.tab.active{background:linear-gradient(135deg,var(--violet-deep),var(--violet));color:#fff;border-color:transparent;
+  box-shadow:0 8px 24px rgba(124,92,255,.35)}
+.panel{display:none}
+.panel.active{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.panel h3{font-family:var(--font-head);font-size:1.6rem;color:#fff;font-weight:700}
+.panel .sub{color:var(--muted);margin-top:6px;margin-bottom:4px}
+
+label{display:block;font-size:.9rem;color:var(--muted);margin:16px 0 7px;font-weight:500}
+input,select{width:100%;padding:13px 15px;border-radius:var(--radius-sm);border:1px solid var(--line);
+  background:rgba(8,6,17,.7);color:var(--text);font-size:1rem;font-family:var(--font-body);transition:.2s}
+input:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(233,196,106,.18)}
+.row{display:flex;gap:10px}
+.row > *{flex:1}
+.field-hint{font-size:.78rem;color:var(--muted-2);margin-top:5px}
+.err{color:#ff9bb0;font-size:.9rem;margin-top:12px;min-height:1em}
+
+.result{margin-top:22px;padding:24px;border-radius:var(--radius);background:var(--glass-2);
+  border:1px solid rgba(233,196,106,.30);display:none;box-shadow:var(--glow-gold)}
+.result.show{display:block;animation:fade .3s ease}
+.result .eyebrow{margin-bottom:8px}
+.big{font-family:var(--font-head);font-weight:700;color:#fff;line-height:1.05}
+.big.xl{font-size:3rem}
+.big.lg{font-size:2.1rem}
+.result h4{font-family:var(--font-head);font-size:1.5rem;color:var(--gold-soft);margin:14px 0 4px}
+.result p{color:var(--muted);margin-top:4px}
+.note{margin-top:18px;font-size:.8rem;color:var(--muted-2);border-top:1px dashed var(--line);padding-top:14px}
+
+.triple{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+.triple .b{background:rgba(8,6,17,.6);border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center}
+.triple .b .k{font-family:var(--font-display);letter-spacing:2px;font-size:.72rem;color:var(--gold);text-transform:uppercase}
+.triple .b .v{font-size:1.05rem;margin-top:6px;color:#fff}
+.wheel-wrap{display:flex;justify-content:center;margin:10px 0 4px}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{text-align:left;padding:10px 9px;border-bottom:1px solid var(--line);font-size:.95rem}
+th{color:var(--muted);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+#interp h4{font-family:var(--font-head);color:var(--gold-soft);margin:16px 0 4px;font-size:1.2rem}
+#interp p{color:var(--muted);font-size:.95rem}
+
+#result.show{display:block !important}
+
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.feat{background:var(--glass);border:1px solid var(--line);border-radius:var(--radius);padding:26px;
+  box-shadow:var(--shadow);transition:.25s}
+.feat:hover{transform:translateY(-5px);border-color:rgba(169,134,255,.4)}
+.feat .ic{font-size:2rem;filter:drop-shadow(0 0 10px rgba(169,134,255,.5))}
+.feat h3{font-family:var(--font-head);font-size:1.4rem;color:#fff;margin:12px 0 6px;font-weight:700}
+.feat p{color:var(--muted);font-size:.95rem}
+
+.faq{max-width:780px;margin:0 auto}
+.faq-item{background:var(--glass);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;
+  overflow:hidden;transition:.2s}
+.faq-item[open],.faq-item.open{box-shadow:var(--glow-violet)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 20px;
+  cursor:pointer;font-weight:600;color:#fff;font-size:1.05rem;list-style:none}
+.faq-q::-webkit-details-marker{display:none}
+.faq-q .plus{color:var(--gold);font-size:1.4rem;transition:.25s;flex:none}
+.faq-item.open .plus,.faq-item[open] .plus{transform:rotate(45deg)}
+.faq-a{padding:0 20px 20px;color:var(--muted);font-size:.98rem}
+.faq-more{text-align:center;margin-top:20px}
+.faq-more a{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-weight:600}
+
+.cta-band{text-align:center;padding:54px 26px;margin:20px auto;max-width:920px;
+  background:linear-gradient(135deg, rgba(124,92,255,.18), rgba(233,196,106,.12));
+  border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}
+.cta-band h2{font-family:var(--font-head);font-size:clamp(1.8rem,4vw,2.6rem);color:#fff;font-weight:700}
+.cta-band p{color:var(--muted);margin:12px auto 24px;max-width:560px}
+
+.site-footer{border-top:1px solid var(--line);margin-top:30px;padding:40px 0 50px;
+  background:rgba(8,6,17,.6)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:26px}
+.foot-brand .brand{margin-bottom:10px}
+.foot-brand p{color:var(--muted);font-size:.9rem;max-width:300px}
+.foot-col h4{font-family:var(--font-display);letter-spacing:2px;font-size:.78rem;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px}
+.foot-col a{display:block;color:var(--muted);font-size:.92rem;padding:5px 0;transition:.2s}
+.foot-col a:hover{color:var(--text)}
+.foot-bottom{text-align:center;color:var(--muted-2);font-size:.82rem;margin-top:30px;
+  border-top:1px solid var(--line);padding-top:22px}
+
+.spark{position:fixed;z-index:9999;pointer-events:none;font-size:18px;will-change:transform,opacity;
+  animation:spark-fly .95s ease-out forwards}
+@keyframes spark-fly{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.4) rotate(0deg)}
+  15%{opacity:1}
+  100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.1) rotate(var(--rot))}
+}
+.ripple{position:fixed;z-index:9998;pointer-events:none;border-radius:50%;border:2px solid rgba(233,196,106,.7);
+  transform:translate(-50%,-50%);animation:ripple-out .7s ease-out forwards}
+@keyframes ripple-out{0%{width:8px;height:8px;opacity:.8}100%{width:90px;height:90px;opacity:0}}
+
+.crumb{font-size:.85rem;color:var(--muted);text-align:center;margin:18px 0 4px}
+.crumb a{color:var(--violet)}
+
+@media(max-width:760px){
+  html,body{overflow-x:hidden}
+  .container{padding:0 18px}
+  .nav-links{position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;
+    gap:0;background:rgba(8,6,17,.98);border-bottom:1px solid var(--line);padding:8px 16px 16px;
+    display:none}
+  .nav-links.show{display:flex}
+  .nav-links a{padding:12px 10px;border-radius:10px}
+  .nav-toggle{display:block}
+  .triple{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .hero{padding:44px 0 26px;min-height:60vh;overflow-x:clip;overflow-y:visible}
+  /* keep hero self-contained so absolutely-positioned art can't widen the page */
+  .hero-mandala{width:min(380px,82vh,118vw);opacity:.28}
+  .hero-stage{display:block;max-width:100%;margin:0 auto}
+  .tcard-left,.tcard-right{display:none}
+  .tcard-back{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%) rotate(3deg);
+    width:min(150px,40vw);z-index:0;opacity:.32;filter:drop-shadow(0 14px 32px rgba(0,0,0,.5))}
+  .hero-center{position:relative;z-index:3;max-width:100%;padding:0 4px}
+  .eyebrow{font-size:.72rem;letter-spacing:.14em;white-space:nowrap;max-width:100%;
+    overflow:hidden;text-overflow:ellipsis}
+  h1{font-size:2.1rem}
+  .lead{font-size:1rem;max-width:100%}
+  .hero-cta{flex-direction:column;gap:12px}
+  .hero-cta .btn{width:100%;box-sizing:border-box}
+  .scroll-hint{display:none}
+}
+@media(max-width:480px){
+  .container{padding:0 15px}
+  .hero h1{font-size:clamp(2rem,6vw,3.5rem)}
+  .hero p.lead{font-size:1.05rem;line-height:1.55}
+  .hero{padding-top:36px}
+  .section{padding:42px 0}
+  .calc-card{padding:22px 16px}
+}
+  
+/* --- 12 星座入口（首页） --- */
+.zgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:9px;margin:8px 0 18px}
+.zcard{display:block;text-align:center;padding:16px 6px;border-radius:var(--radius-sm);
+  background:var(--glass);border:1px solid var(--line);color:var(--muted);
+  box-shadow:var(--shadow);transition:.25s;overflow:hidden}
+.zcard:hover{text-decoration:none;border-color:rgba(233,196,106,.45);
+  box-shadow:var(--glow-gold);transform:translateY(-6px);color:var(--gold-soft)}
+.zcard:active{background:linear-gradient(135deg,var(--violet-deep),var(--violet));
+  border-color:transparent;box-shadow:0 8px 24px rgba(124,92,255,.35);
+  transform:translateY(-2px) scale(.98);color:#fff;transition-duration:.08s}
+.zg{display:block;font-size:1.6rem;line-height:1.15;margin-bottom:6px;color:var(--gold);
+  font-family:"Segoe UI Symbol","Apple Symbols","Noto Sans Symbols 2","Noto Sans Symbols","DejaVu Sans",serif}
+.zg{font-variant-emoji:text}
+.zn{display:block;color:#fff;font-size:.9rem;font-weight:500;margin-bottom:3px}
+.zd{display:block;font-size:.68rem;color:var(--muted-2);letter-spacing:.03em}
+.zmore{text-align:center;margin-top:6px}
+@media(max-width:760px){.zgrid{grid-template-columns:repeat(3,1fr)}}
+
+</style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Horoscope",
+    "url": "https://horoscopetools.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://horoscopetools.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Horoscope",
+    "url": "https://horoscopetools.com/",
+    "description": "Horoscope offers free, private astrology, numerology and tarot tools for self-discovery and reflection."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What is a natal (birth) chart and how is it calculated?","acceptedAnswer":{"@type":"Answer","text":"A natal chart is a map of the sky at your exact birth moment and place. Horoscope computes planet positions with the VSOP87 astronomical model and derives your Ascendant and houses from your birth time and coordinates."}},
+      {"@type":"Question","name":"How accurate are these calculators?","acceptedAnswer":{"@type":"Answer","text":"The astronomy is professional-grade (VSOP87) and runs entirely in your browser. Interpretations are general, symbolic and for entertainment and self-reflection only."}},
+      {"@type":"Question","name":"Is my birth information kept private?","acceptedAnswer":{"@type":"Answer","text":"Yes. All calculations run locally in your browser, so your birth date, time and place are never sent to a server."}}
+    ]
+  }
+  </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NM5CK35NXE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NM5CK35NXE');
+</script></head>
+<body>
+  <div class="bg-fixed"></div>
+  <div class="bg-moon"></div>
+  <div class="bg-stars"></div>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="mark">✦</span> Horoscope</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/zodiac-signs/">Zodiac Signs</a>
+        <a href="/natal-chart.html">Natal Chart</a>
+        <a href="/#tarot">Tarot</a>
+        <a href="/#life">Life Path</a>
+        <a href="/#sun">Sun Sign</a>
+        <a href="/#faq">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <header class="hero container">
+      <!-- constellation wheel backdrop -->
+      <svg class="hero-mandala" viewBox="0 0 600 600" aria-hidden="true">
+        <g fill="none" stroke="#a986ff" stroke-opacity=".16">
+          <circle cx="300" cy="300" r="282"/>
+          <circle cx="300" cy="300" r="262" stroke="#e9c46a" stroke-opacity=".14" stroke-dasharray="2 11"/>
+          <circle cx="300" cy="300" r="200" stroke="#a986ff" stroke-opacity=".12"/>
+          <circle cx="300" cy="300" r="120" stroke="#e9c46a" stroke-opacity=".10"/>
+        </g>
+        <g stroke="#a986ff" stroke-opacity=".10">
+          <line x1="300" y1="300" x2="300" y2="38"/>
+          <line x1="300" y1="300" x2="431" y2="73"/>
+          <line x1="300" y1="300" x2="527" y2="169"/>
+          <line x1="300" y1="300" x2="562" y2="300"/>
+          <line x1="300" y1="300" x2="527" y2="431"/>
+          <line x1="300" y1="300" x2="431" y2="527"/>
+          <line x1="300" y1="300" x2="300" y2="562"/>
+          <line x1="300" y1="300" x2="169" y2="527"/>
+          <line x1="300" y1="300" x2="73" y2="431"/>
+          <line x1="300" y1="300" x2="38" y2="300"/>
+          <line x1="300" y1="300" x2="73" y2="169"/>
+          <line x1="300" y1="300" x2="169" y2="73"/>
+        </g>
+        <g class="zodiac-glyph" fill="#e9c46a" fill-opacity=".55" font-size="26" font-family="Cinzel, serif" text-anchor="middle" dominant-baseline="central">
+          <text x="300" y="38">♈</text>
+          <text x="431" y="73">♉</text>
+          <text x="527" y="169">♊</text>
+          <text x="562" y="300">♋</text>
+          <text x="527" y="431">♌</text>
+          <text x="431" y="527">♍</text>
+          <text x="300" y="562">♎</text>
+          <text x="169" y="527">♏</text>
+          <text x="73" y="431">♐</text>
+          <text x="38" y="300">♑</text>
+          <text x="73" y="169">♒</text>
+          <text x="169" y="73">♓</text>
+        </g>
+      </svg>
+
+      <div class="hero-stage">
+        <!-- THE STAR (depth, behind) -->
+        <div class="tcard tcard-back" aria-hidden="true">
+          <svg viewBox="0 0 200 320">
+            <defs><linearGradient id="gStar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#241647"/><stop offset="1" stop-color="#0c0820"/></linearGradient></defs>
+            <rect x="5" y="5" width="190" height="310" rx="16" fill="url(#gStar)" stroke="#e9c46a" stroke-opacity=".7" stroke-width="2"/>
+            <rect x="12" y="12" width="176" height="296" rx="11" fill="none" stroke="#a986ff" stroke-opacity=".35"/>
+            <text x="100" y="48" text-anchor="middle" font-family="Cinzel, serif" font-size="22" fill="#e9c46a">XVII</text>
+            <line x1="48" y1="64" x2="152" y2="64" stroke="#e9c46a" stroke-opacity=".5"/>
+            <g transform="translate(100,150)">
+              <g stroke="#e9c46a" stroke-opacity=".35">
+                <line x1="0" y1="-58" x2="0" y2="-86"/><line x1="0" y1="58" x2="0" y2="86"/>
+                <line x1="-58" y1="0" x2="-86" y2="0"/><line x1="58" y1="0" x2="86" y2="0"/>
+                <line x1="-41" y1="-41" x2="-61" y2="-61"/><line x1="41" y1="-41" x2="61" y2="-61"/>
+                <line x1="-41" y1="41" x2="-61" y2="61"/><line x1="41" y1="41" x2="61" y2="61"/>
+              </g>
+              <path d="M0,-46 L11,-14 L44,-14 L18,7 L28,40 L0,20 L-28,40 L-18,7 L-44,-14 L-11,-14 Z" fill="#f4d58d"/>
+            </g>
+            <g fill="#a986ff">
+              <circle cx="62" cy="118" r="3"/><circle cx="138" cy="118" r="3"/>
+              <circle cx="100" cy="96" r="3"/><circle cx="72" cy="186" r="3"/>
+              <circle cx="128" cy="186" r="3"/><circle cx="100" cy="206" r="3"/>
+              <circle cx="100" cy="120" r="2.4"/>
+            </g>
+            <path d="M30 262 q20 -9 40 0 t40 0 t40 0 t40 0" fill="none" stroke="#a986ff" stroke-opacity=".55"/>
+            <line x1="48" y1="284" x2="152" y2="284" stroke="#e9c46a" stroke-opacity=".5"/>
+            <text x="100" y="302" text-anchor="middle" font-family="Cinzel, serif" font-size="13" fill="#f4d58d" letter-spacing="3">THE STAR</text>
+          </svg>
+        </div>
+
+        <!-- THE FOOL (left) -->
+        <div class="tcard tcard-left" aria-hidden="true">
+          <svg viewBox="0 0 200 320">
+            <defs><linearGradient id="gFool" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#241647"/><stop offset="1" stop-color="#0c0820"/></linearGradient></defs>
+            <rect x="5" y="5" width="190" height="310" rx="16" fill="url(#gFool)" stroke="#e9c46a" stroke-opacity=".7" stroke-width="2"/>
+            <rect x="12" y="12" width="176" height="296" rx="11" fill="none" stroke="#a986ff" stroke-opacity=".35"/>
+            <text x="100" y="48" text-anchor="middle" font-family="Cinzel, serif" font-size="26" fill="#e9c46a">0</text>
+            <line x1="48" y1="66" x2="152" y2="66" stroke="#e9c46a" stroke-opacity=".5"/>
+            <g transform="translate(100,148)">
+              <path d="M0,-46 L11,-14 L44,-14 L18,7 L28,40 L0,20 L-28,40 L-18,7 L-44,-14 L-11,-14 Z" fill="#f4d58d"/>
+              <circle cx="0" cy="-2" r="6" fill="#a986ff"/>
+            </g>
+            <path d="M28 248 q40 -22 72 0 t72 0" fill="none" stroke="#a986ff" stroke-opacity=".5"/>
+            <circle cx="72" cy="262" r="5" fill="#e9c46a"/>
+            <circle cx="120" cy="244" r="4" fill="#f4d58d"/>
+            <line x1="48" y1="284" x2="152" y2="284" stroke="#e9c46a" stroke-opacity=".5"/>
+            <text x="100" y="302" text-anchor="middle" font-family="Cinzel, serif" font-size="13" fill="#f4d58d" letter-spacing="3">THE FOOL</text>
+          </svg>
+        </div>
+
+        <!-- center copy -->
+        <div class="hero-center">
+          <div class="eyebrow">Astrology · Numerology · Tarot</div>
+          <h1>Read the stars,<br><span class="accent">know yourself</span></h1>
+          <p class="lead">Free, private birth-chart, numerology and tarot tools — crafted for self-discovery and gentle healing. No sign-up, no data leaves your device.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="natal-chart.html">Generate Your Birth Chart <span class="arr">→</span></a>
+          </div>
+        </div>
+
+        <!-- THE MOON (right) -->
+        <div class="tcard tcard-right" aria-hidden="true">
+          <svg viewBox="0 0 200 320">
+            <defs><linearGradient id="gMoon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#241647"/><stop offset="1" stop-color="#0c0820"/></linearGradient></defs>
+            <rect x="5" y="5" width="190" height="310" rx="16" fill="url(#gMoon)" stroke="#e9c46a" stroke-opacity=".7" stroke-width="2"/>
+            <rect x="12" y="12" width="176" height="296" rx="11" fill="none" stroke="#a986ff" stroke-opacity=".35"/>
+            <text x="100" y="48" text-anchor="middle" font-family="Cinzel, serif" font-size="22" fill="#e9c46a">XVIII</text>
+            <line x1="48" y1="64" x2="152" y2="64" stroke="#e9c46a" stroke-opacity=".5"/>
+            <circle cx="100" cy="138" r="40" fill="#f4d58d" opacity=".92"/>
+            <g fill="#0c0820" opacity=".22">
+              <circle cx="86" cy="126" r="7"/><circle cx="112" cy="146" r="5"/><circle cx="100" cy="118" r="4"/>
+            </g>
+            <rect x="38" y="186" width="18" height="66" rx="3" fill="#a986ff" opacity=".55"/>
+            <rect x="144" y="186" width="18" height="66" rx="3" fill="#a986ff" opacity=".55"/>
+            <path d="M70 252 q15 -12 30 0 t30 0" fill="none" stroke="#a986ff" stroke-opacity=".6"/>
+            <path d="M58 244 q-6 6 0 12 q6 -2 4 -8 Z" fill="#e9c46a" opacity=".8"/>
+            <path d="M142 244 q6 6 0 12 q-6 -2 -4 -8 Z" fill="#e9c46a" opacity=".8"/>
+            <line x1="48" y1="284" x2="152" y2="284" stroke="#e9c46a" stroke-opacity=".5"/>
+            <text x="100" y="302" text-anchor="middle" font-family="Cinzel, serif" font-size="13" fill="#f4d58d" letter-spacing="3">THE MOON</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span class="mouse"></span>
+        Begin your reading
+      </div>
+    </header>
+
+    <!-- TOOLS GRID (guide cards) -->
+    <section class="section container" aria-label="Our tools">
+      <div class="section-head">
+        <h2>Begin your reading</h2>
+        <p>Four doorways into self-reflection. Pick what calls to you.</p>
+      </div>
+      <div class="tools-grid">
+        <a class="tool-card" href="natal-chart.html">
+          <div class="em" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="11"/><path d="M24 6v36M6 24h36M11.3 11.3l25.4 25.4M36.7 11.3L11.3 36.7"/><circle cx="24" cy="24" r="2.5"/></svg></div><div class="t">Natal Chart</div>
+          <div class="d">Your full birth chart: Sun, Moon, Rising &amp; houses.</div>
+          <div class="go">Explore <span class="arr">→</span></div>
+        </a>
+        <a class="tool-card" href="index.html#life">
+          <div class="em" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M15 8v32M9 14l6-6 6 6M29 11c2.2-3.5 10-2.7 10 3.2 0 6.2-10 7.5-10 15.8h11M28 40h13"/><circle cx="15" cy="24" r="17"/></svg></div><div class="t">Life Path Number</div>
+          <div class="d">Your numerology core from your birth date.</div>
+          <div class="go">Calculate <span class="arr">→</span></div>
+        </a>
+        <a class="tool-card" href="index.html#sun">
+          <div class="em" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="9"/><path d="M24 4v7M24 37v7M4 24h7M37 24h7M9.9 9.9l5 5M33.1 33.1l5 5M38.1 9.9l-5 5M14.9 33.1l-5 5"/></svg></div><div class="t">Sun Sign</div>
+          <div class="d">Discover your zodiac Sun sign instantly.</div>
+          <div class="go">Reveal <span class="arr">→</span></div>
+        </a>
+        <a class="tool-card" href="index.html#tarot">
+          <div class="em" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="11" y="6" width="26" height="36" rx="3"/><rect x="15" y="10" width="18" height="28" rx="1"/><path d="M24 15l2.3 4.7 5.2.8-3.8 3.7.9 5.2-4.6-2.5-4.6 2.5.9-5.2-3.8-3.7 5.2-.8z"/></svg></div><div class="t">Daily Tarot</div>
+          <div class="d">One card a day for focus and reflection.</div>
+          <div class="go">Draw <span class="arr">→</span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- CALCULATORS -->
+    <section class="section container" id="tools" aria-label="Calculators">
+      <div class="section-head">
+        <h2>Try a tool now</h2>
+        <p>Tap a tab and enter a detail or two. Results appear instantly.</p>
+      </div>
+      <div class="glass calc-card">
+        <div class="tabs">
+          <div class="tab active" data-tab="life">Life Path Number</div>
+          <div class="tab" data-tab="sun">Sun Sign</div>
+          <div class="tab" data-tab="tarot">Daily Tarot</div>
+        </div>
+
+        <!-- LIFE PATH -->
+        <section class="panel active" id="life">
+          <h3>Life Path Number</h3>
+          <p class="sub">Your Life Path reveals core traits and direction. Enter your full birth date.</p>
+          <label for="bdate">Birth Date</label>
+          <input type="date" id="bdate" max="2025-12-31"  lang="en">
+          <div class="err" id="lifeErr"></div>
+          <button class="btn btn-primary btn-block" onclick="calcLifePath()">Calculate Life Path <span class="arr">→</span></button>
+          <div class="result" id="lifeResult">
+            <div class="eyebrow">Your Life Path Number</div>
+            <div class="big xl" id="lpNum">—</div>
+            <h4 id="lpTitle"></h4>
+            <p id="lpDesc"></p>
+          </div>
+          <div class="note">For entertainment and self-reflection only. Numerology is not a substitute for professional advice.</div>
+        </section>
+
+        <!-- SUN SIGN -->
+        <section class="panel" id="sun">
+          <h3>Sun Sign</h3>
+          <p class="sub">Find your zodiac Sun sign from your birth date.</p>
+          <label for="smonth">Month</label>
+          <select id="smonth">
+            <option value="1">January</option><option value="2">February</option><option value="3">March</option>
+            <option value="4">April</option><option value="5">May</option><option value="6">June</option>
+            <option value="7">July</option><option value="8">August</option><option value="9">September</option>
+            <option value="10">October</option><option value="11">November</option><option value="12">December</option>
+          </select>
+          <label for="sday">Day</label>
+          <input type="number" id="sday" min="1" max="31" placeholder="e.g. 14" />
+          <div class="err" id="sunErr"></div>
+          <button class="btn btn-primary btn-block" onclick="calcSun()">Find My Sun Sign <span class="arr">→</span></button>
+          <div class="result" id="sunResult">
+            <div class="eyebrow">Your Sun Sign</div>
+            <div class="big xl" id="sunName">—</div>
+            <h4 id="sunDates"></h4>
+            <p id="sunDesc"></p>
+          </div>
+          <div class="note">For entertainment and self-reflection only.</div>
+        </section>
+
+        <!-- DAILY TAROT -->
+        <section class="panel" id="tarot">
+          <h3>Daily Tarot Card</h3>
+          <p class="sub">Draw one card for the day. Focus on a question, then reveal.</p>
+          <button class="btn btn-primary btn-block" onclick="drawTarot()">Draw My Card <span class="arr">→</span></button>
+          <div class="result" id="tarotResult">
+            <div class="eyebrow" id="tarotOrient"></div>
+            <div class="big lg" id="tarotName">—</div>
+            <h4 id="tarotKeyword"></h4>
+            <p id="tarotDesc"></p>
+          </div>
+          <div class="note">Tarot is a tool for reflection, not prediction. For entertainment only.</div>
+        </section>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section container" aria-label="Why Horoscope">
+      <div class="section-head">
+        <h2>Why Horoscope</h2>
+        <p>A calm, beautiful space to explore the self.</p>
+      </div>
+      <div class="feat-grid">
+        <div class="feat"><div class="ic">🔒</div><h3>Private by design</h3><p>Calculations run in your browser. Your birth data never leaves your device.</p></div>
+        <div class="feat"><div class="ic">✨</div><h3>Accurate astronomy</h3><p>Built on the VSOP87 model used by professional astronomy software.</p></div>
+        <div class="feat"><div class="ic">🌙</div><h3>Gentle &amp; healing</h3><p>Warm, reflective language for self-growth — never fear-based.</p></div>
+        <div class="feat"><div class="ic">📱</div><h3>Works everywhere</h3><p>Fully responsive. Open on any phone, tablet or computer, no app needed.</p></div>
+      </div>
+    </section>
+
+    <!-- FAQ (GEO-friendly) -->
+    <!-- ZODIAC-GRID -->
+    <!-- 12 ZODIAC SIGNS -->
+    <section class="section container" id="zodiac" aria-label="The 12 zodiac signs">
+      <div class="section-head">
+        <h2>The 12 zodiac signs</h2>
+        <p>Dates, elements and the full guide to every sign.</p>
+      </div>
+      <div class="zgrid">
+        <a class="zcard" href="/zodiac-signs/aries/"><span class="zg">♈︎</span><span class="zn">Aries</span><span class="zd">Mar 21 – Apr 19</span></a>
+        <a class="zcard" href="/zodiac-signs/taurus/"><span class="zg">♉︎</span><span class="zn">Taurus</span><span class="zd">Apr 20 – May 20</span></a>
+        <a class="zcard" href="/zodiac-signs/gemini/"><span class="zg">♊︎</span><span class="zn">Gemini</span><span class="zd">May 21 – Jun 20</span></a>
+        <a class="zcard" href="/zodiac-signs/cancer/"><span class="zg">♋︎</span><span class="zn">Cancer</span><span class="zd">Jun 21 – Jul 22</span></a>
+        <a class="zcard" href="/zodiac-signs/leo/"><span class="zg">♌︎</span><span class="zn">Leo</span><span class="zd">Jul 23 – Aug 22</span></a>
+        <a class="zcard" href="/zodiac-signs/virgo/"><span class="zg">♍︎</span><span class="zn">Virgo</span><span class="zd">Aug 23 – Sep 22</span></a>
+        <a class="zcard" href="/zodiac-signs/libra/"><span class="zg">♎︎</span><span class="zn">Libra</span><span class="zd">Sep 23 – Oct 22</span></a>
+        <a class="zcard" href="/zodiac-signs/scorpio/"><span class="zg">♏︎</span><span class="zn">Scorpio</span><span class="zd">Oct 23 – Nov 21</span></a>
+        <a class="zcard" href="/zodiac-signs/sagittarius/"><span class="zg">♐︎</span><span class="zn">Sagittarius</span><span class="zd">Nov 22 – Dec 21</span></a>
+        <a class="zcard" href="/zodiac-signs/capricorn/"><span class="zg">♑︎</span><span class="zn">Capricorn</span><span class="zd">Dec 22 – Jan 19</span></a>
+        <a class="zcard" href="/zodiac-signs/aquarius/"><span class="zg">♒︎</span><span class="zn">Aquarius</span><span class="zd">Jan 20 – Feb 18</span></a>
+        <a class="zcard" href="/zodiac-signs/pisces/"><span class="zg">♓︎</span><span class="zn">Pisces</span><span class="zd">Feb 19 – Mar 20</span></a>
+      </div>
+      <div class="zmore"><a class="btn-gold" href="/zodiac-signs/">See the full table of all 12 &rarr;</a></div>
+    </section>
+
+
+    <section class="section container" id="faq" aria-label="Frequently asked questions">
+      <div class="section-head">
+        <h2>Questions, answered</h2>
+        <p>The essentials about charts, numbers and tarot.</p>
+      </div>
+      <div class="faq">
+        <details class="faq-item"><summary class="faq-q">What is a natal (birth) chart and how is it calculated?<span class="plus">+</span></summary><div class="faq-a">A natal chart is a map of the sky at your exact birth moment and place. Horoscope computes planet positions with the VSOP87 astronomical model and derives your Ascendant and houses from your birth time and coordinates.</div></details>
+        <details class="faq-item"><summary class="faq-q">How accurate are these calculators?<span class="plus">+</span></summary><div class="faq-a">The astronomy is professional-grade (VSOP87) and runs entirely in your browser. Interpretations are general, symbolic and for entertainment and self-reflection only.</div></details>
+        <details class="faq-item"><summary class="faq-q">Is my birth information kept private?<span class="plus">+</span></summary><div class="faq-a">Yes. All calculations run locally in your browser, so your birth date, time and place are never sent to a server.</div></details>
+        <div class="faq-more"><a href="natal-chart.html#faq">View all FAQ <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="container">
+      <div class="cta-band">
+        <h2>Your chart is waiting</h2>
+        <p>Generate your full birth chart in under a minute — Sun, Moon, Rising and every planet, mapped by house.</p>
+        <a class="btn btn-primary" href="natal-chart.html">Generate Your Birth Chart <span class="arr">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html"><span class="mark">✦</span> Horoscope</a>
+        <p>Free, private tools for astrology, numerology and tarot — a calm space for self-discovery and reflection.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Tools</h4>
+        <a href="/zodiac-signs/">Zodiac Signs</a>
+        <a href="/natal-chart.html">Natal Chart</a>
+        <a href="/#life">Life Path Number</a>
+        <a href="/#sun">Sun Sign</a>
+        <a href="/#tarot">Daily Tarot</a>
+      </div>
+      <div class="foot-col">
+        <h4>Learn</h4>
+        <a href="index.html#faq">FAQ</a>
+        <a href="natal-chart.html">How charts work</a>
+        <a href="index.html#tools">All calculators</a>
+      </div>
+    </div>
+    <div class="container foot-bottom">
+      <p>© <span id="year">2026</span> Horoscope. For entertainment &amp; reflection only. Not medical, financial or psychological advice.</p>
+    </div>
+  </footer>
+
+  <script>
+/* Horoscope — shared site behavior */
+(function () {
+  'use strict';
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggle = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (toggle && links) {
+      toggle.addEventListener('click', function () { links.classList.toggle('show'); });
+      links.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { links.classList.remove('show'); });
+      });
+    }
+    var path = location.pathname.split('/').pop();
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      var href = a.getAttribute('href') || '';
+      if (href === path || (path === '' && href === 'index.html') ||
+          (path === 'index.html' && href === 'index.html')) {
+        a.classList.add('active');
+      }
+    });
+    var sky = document.querySelector('.bg-stars');
+    if (sky && !sky.dataset.built) {
+      sky.dataset.built = '1';
+      var n = window.innerWidth < 700 ? 60 : 110;
+      var frag = document.createDocumentFragment();
+      for (var i = 0; i < n; i++) {
+        var s = document.createElement('span');
+        s.className = 'star';
+        var sz = (Math.random() * 2 + 1).toFixed(1);
+        s.style.width = sz + 'px';
+        s.style.height = sz + 'px';
+        s.style.left = (Math.random() * 100).toFixed(2) + '%';
+        s.style.top = (Math.random() * 100).toFixed(2) + '%';
+        s.style.animationDelay = (Math.random() * 4).toFixed(2) + 's';
+        s.style.opacity = (Math.random() * 0.5 + 0.2).toFixed(2);
+        frag.appendChild(s);
+      }
+      sky.appendChild(frag);
+    }
+    var GLYPHS = ['✦', '✶', '☾', '✺', '⟡', '✧', '❋', '✷', '☽', '✸'];
+    var COLORS = ['#e9c46a', '#f4d58d', '#a986ff', '#c9b3ff'];
+    var SEL = 'button, .btn, .tool-card, .tab, .zcard, .faq-q, a.cta, .brand';
+    document.addEventListener('click', function (e) {
+      var el = e.target.closest(SEL);
+      if (!el) return;
+      var x = e.clientX, y = e.clientY;
+      if (x == null || y == null) return;
+      var rip = document.createElement('span');
+      rip.className = 'ripple';
+      rip.style.left = x + 'px';
+      rip.style.top = y + 'px';
+      document.body.appendChild(rip);
+      setTimeout(function () { rip.remove(); }, 720);
+      var count = 12;
+      for (var i = 0; i < count; i++) {
+        var sp = document.createElement('span');
+        sp.className = 'spark';
+        sp.textContent = GLYPHS[(Math.random() * GLYPHS.length) | 0];
+        sp.style.left = x + 'px';
+        sp.style.top = y + 'px';
+        sp.style.color = COLORS[(Math.random() * COLORS.length) | 0];
+        var ang = Math.random() * Math.PI * 2;
+        var dist = 30 + Math.random() * 70;
+        var dx = Math.cos(ang) * dist;
+        var dy = Math.sin(ang) * dist - 30;
+        sp.style.setProperty('--dx', dx.toFixed(1) + 'px');
+        sp.style.setProperty('--dy', dy.toFixed(1) + 'px');
+        sp.style.setProperty('--rot', (Math.random() * 360 - 180).toFixed(0) + 'deg');
+        sp.style.fontSize = (13 + Math.random() * 12).toFixed(0) + 'px';
+        sp.style.animationDelay = (Math.random() * 0.08).toFixed(2) + 's';
+        document.body.appendChild(sp);
+        (function (node) { setTimeout(function () { node.remove(); }, 1100); })(sp);
+      }
+    });
+    var y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  });
+})();
+  </script>
+  <script>
+    // ---------- Tabs (and hash activation) ----------
+    function activateTab(id){
+      var tab = document.querySelector('.tab[data-tab="'+id+'"]');
+      if(!tab) return;
+      document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active');});
+      document.querySelectorAll('.panel').forEach(function(x){x.classList.remove('active');});
+      tab.classList.add('active');
+      var panel = document.getElementById(id);
+      if(panel) panel.classList.add('active');
+    }
+    document.querySelectorAll('.tab').forEach(function(t){
+      t.addEventListener('click', function(){ activateTab(t.dataset.tab); });
+    });
+    // nav anchors to a tab panel
+    document.querySelectorAll('.nav-links a[href*="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var h = a.getAttribute('href').split('#')[1];
+        if(h && document.getElementById(h)){
+          e.preventDefault();
+          activateTab(h);
+          setTimeout(function(){ document.getElementById(h).scrollIntoView({behavior:'smooth',block:'center'}); }, 60);
+        }
+      });
+    });
+    if(location.hash){ var hid=location.hash.slice(1); if(document.getElementById(hid)) activateTab(hid); }
+
+    // ---------- Life Path Number ----------
+    var LP = {
+      1:{t:"The Leader",d:"Independent, ambitious and original. You forge your own path and inspire others to act."},
+      2:{t:"The Peacemaker",d:"Sensitive, cooperative and diplomatic. You thrive in partnership and bring harmony."},
+      3:{t:"The Creative",d:"Expressive, social and optimistic. You shine when sharing your gifts with the world."},
+      4:{t:"The Builder",d:"Practical, steady and hardworking. You turn ideas into solid, lasting structure."},
+      5:{t:"The Explorer",d:"Free-spirited, adaptable and curious. Change and variety fuel your growth."},
+      6:{t:"The Nurturer",d:"Caring, responsible and devoted. You heal and support those around you."},
+      7:{t:"The Seeker",d:"Analytical, introspective and wise. You search for deeper truth and meaning."},
+      8:{t:"The Powerhouse",d:"Ambitious, confident and resourceful. You are built for achievement and abundance."},
+      9:{t:"The Humanitarian",d:"Compassionate, idealistic and generous. You are driven to serve and uplift."},
+      11:{t:"The Intuitive (Master)",d:"A master number of insight and inspiration. You channel vision beyond the ordinary."},
+      22:{t:"The Master Builder",d:"A master number of manifestation. You turn grand visions into reality."},
+      33:{t:"The Master Teacher",d:"A master number of love and guidance. You uplift through compassion and wisdom."}
+    };
+    function reduceToSingle(n){
+      while(n>9){ if(n===11||n===22||n===33) break; n=String(n).split('').reduce(function(a,c){return a+Number(c);},0); }
+      return n;
+    }
+    function calcLifePath(){
+      var v=document.getElementById('bdate').value, e=document.getElementById('lifeErr');
+      e.textContent='';
+      if(!v){ e.textContent='Please enter your birth date.'; return; }
+      var digits=v.replaceAll('-','').split('').map(Number);
+      var lp=reduceToSingle(digits.reduce(function(a,c){return a+c;},0));
+      document.getElementById('lpNum').textContent=lp;
+      document.getElementById('lpTitle').textContent=LP[lp].t;
+      document.getElementById('lpDesc').textContent=LP[lp].d;
+      document.getElementById('lifeResult').classList.add('show');
+    }
+
+    // ---------- Sun Sign ----------
+    var SIGNS=[
+      {n:"Capricorn",from:[1,1],to:[1,19],d:"Ambitious, disciplined and grounded."},
+      {n:"Aquarius",from:[1,20],to:[2,18],d:"Independent, visionary and humanitarian."},
+      {n:"Pisces",from:[2,19],to:[3,20],d:"Intuitive, empathetic and dreamy."},
+      {n:"Aries",from:[3,21],to:[4,19],d:"Bold, energetic and pioneering."},
+      {n:"Taurus",from:[4,20],to:[5,20],d:"Stable, sensual and determined."},
+      {n:"Gemini",from:[5,21],to:[6,20],d:"Curious, witty and adaptable."},
+      {n:"Cancer",from:[6,21],to:[7,22],d:"Nurturing, emotional and protective."},
+      {n:"Leo",from:[7,23],to:[8,22],d:"Confident, warm and expressive."},
+      {n:"Virgo",from:[8,23],to:[9,22],d:"Precise, practical and thoughtful."},
+      {n:"Libra",from:[9,23],to:[10,22],d:"Balanced, charming and fair."},
+      {n:"Scorpio",from:[10,23],to:[11,21],d:"Intense, passionate and perceptive."},
+      {n:"Sagittarius",from:[11,22],to:[12,21],d:"Adventurous, optimistic and free."},
+      {n:"Capricorn",from:[12,22],to:[12,31],d:"Ambitious, disciplined and grounded."}
+    ];
+    function calcSun(){
+      var m=+document.getElementById('smonth').value, d=+document.getElementById('sday').value, e=document.getElementById('sunErr');
+      e.textContent='';
+      if(!d||d<1||d>31){ e.textContent='Please enter a valid day (1-31).'; return; }
+      var s=SIGNS.find(function(x){(m===x.from[0]&&d>=x.from[1])||(m===x.to[0]&&d<=x.to[1])});
+      if(!s){ e.textContent='Invalid date.'; return; }
+      document.getElementById('sunName').textContent=s.n;
+      document.getElementById('sunDates').textContent='Dates: '+s.from[0]+'/'+s.from[1]+' – '+s.to[0]+'/'+s.to[1];
+      document.getElementById('sunDesc').textContent=s.d;
+      document.getElementById('sunResult').classList.add('show');
+    }
+
+    // ---------- Daily Tarot (Major Arcana) ----------
+    var TAROT=[
+      {n:"0 The Fool",k:"New Beginnings",u:"A leap of faith, freedom and fresh potential.",rv:"Recklessness or fear of the unknown."},
+      {n:"1 The Magician",k:"Manifestation",u:"You have the tools to create your reality.",rv:"Self-doubt or untapped potential."},
+      {n:"2 The High Priestess",k:"Intuition",u:"Trust your inner voice and the unseen.",rv:"Ignoring intuition or secrets."},
+      {n:"3 The Empress",k:"Abundance",u:"Nurturance, creativity and growth.",rv:"Dependence or creative block."},
+      {n:"4 The Emperor",k:"Authority",u:"Structure, leadership and control.",rv:"Rigidity or domination."},
+      {n:"5 The Hierophant",k:"Tradition",u:"Guidance, belief and established wisdom.",rv:"Dogma or rebellion."},
+      {n:"6 The Lovers",k:"Union",u:"Love, choices and alignment.",rv:"Disharmony or difficult choice."},
+      {n:"7 The Chariot",k:"Willpower",u:"Drive, focus and victory through effort.",rv:"Loss of direction or control."},
+      {n:"8 Strength",k:"Courage",u:"Inner strength, patience and gentleness.",rv:"Self-doubt or weakness."},
+      {n:"9 The Hermit",k:"Introspection",u:"Solitude, soul-searching and wisdom.",rv:"Isolation or avoidance."},
+      {n:"10 Wheel of Fortune",k:"Cycles",u:"Turning point, fate and opportunity.",rv:"Resistance to change or bad luck."},
+      {n:"11 Justice",k:"Truth",u:"Fairness, cause and effect, clarity.",rv:"Injustice or denial of accountability."},
+      {n:"12 The Hanged Man",k:"Surrender",u:"A new perspective through pause.",rv:"Stalling or needless sacrifice."},
+      {n:"13 Death",k:"Transformation",u:"Endings that clear space for rebirth.",rv:"Clinging or fear of change."},
+      {n:"14 Temperance",k:"Balance",u:"Harmony, patience and moderation.",rv:"Imbalance or excess."},
+      {n:"15 The Devil",k:"Attachment",u:"Bondage, desire and limiting beliefs.",rv:"Breaking free and awareness."},
+      {n:"16 The Tower",k:"Upheaval",u:"Sudden change that reveals truth.",rv:"Avoiding collapse or crisis."},
+      {n:"17 The Star",k:"Hope",u:"Healing, faith and quiet guidance.",rv:"Discouragement or lost faith."},
+      {n:"18 The Moon",k:"Illusion",u:"Dreams, the subconscious and uncertainty.",rv:"Confusion or hidden fears."},
+      {n:"19 The Sun",k:"Joy",u:"Success, vitality and clarity.",rv:"Delayed joy or over-optimism."},
+      {n:"20 Judgement",k:"Awakening",u:"Reckoning, rebirth and a calling.",rv:"Self-criticism or ignoring the call."},
+      {n:"21 The World",k:"Completion",u:"Fulfillment, wholeness and achievement.",rv:"Unfinished business or delay."}
+    ];
+    function drawTarot(){
+      var c=TAROT[Math.floor(Math.random()*TAROT.length)];
+      var rev=Math.random()<0.35;
+      document.getElementById('tarotOrient').textContent=rev?'Reversed':'Upright';
+      document.getElementById('tarotName').textContent=c.n;
+      document.getElementById('tarotKeyword').textContent='Keyword: '+c.k;
+      document.getElementById('tarotDesc').textContent=rev?c.rv:c.u;
+      document.getElementById('tarotResult').classList.add('show');
+    }
+  </script>
+</body>
+</html>

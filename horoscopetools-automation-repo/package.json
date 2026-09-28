@@ -1,0 +1,15 @@
+{
+  "name": "horoscopetools-automation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "每日重建 horoscopetools.com 的真算页面（12 daily + 79 compatibility）",
+  "scripts": {
+    "build": "bash refresh.sh",
+    "daily": "SKIP_DEPLOY=1 bash refresh.sh",
+    "verify": "SITE_ROOT=build node eph/vd.mjs && SITE_ROOT=build node eph/vc.mjs"
+  },
+  "dependencies": {
+    "astronomia": "4.2.0"
+  }
+}
