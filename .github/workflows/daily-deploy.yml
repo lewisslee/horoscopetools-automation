@@ -1,0 +1,94 @@
+name: 每日重建并发布 horoscopetools.com
+
+on:
+  schedule:
+    # GitHub Actions 用 UTC。23:17 UTC = 次日 07:17 北京时间
+    - cron: "17 23 * * *"
+  workflow_dispatch:   # 可以在 Actions 页面手动触发，用来测试
+
+concurrency:
+  group: horoscopetools-daily
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    name: 重建 + 发布
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: 安装依赖
+        run: npm ci --omit=dev
+
+      - name: 安装 Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 重建（��部署，先验证）
+        run: bash refresh.sh
+        env:
+          SKIP_DEPLOY: '1'
+
+      - name: 核对产物数量
+        run: |
+          set -euo pipefail
+          DAILY=$(find build/horoscope -name index.html | wc -l)
+          COMPAT=$(find build/compatibility -name index.html | wc -l)
+          SIGNS=$(find build/zodiac-signs -name index.html | wc -l)
+          URLS=$(grep -c '<loc>' build/sitemap.xml)
+          echo "daily=$DAILY compatibility=$COMPAT zodiac=$SIGNS sitemap=$URLS"
+          [ "$DAILY" -eq 12 ] || { echo "❌ daily 应为 12，实际 $DAILY"; exit 1; }
+          [ "$COMPAT" -eq 79 ] || { echo "❌ compatibility 应为 79，实际 $COMPAT"; exit 1; }
+          [ "$SIGNS" -eq 13 ]  || { echo "❌ zodiac-signs 应为 13，实际 $SIGNS"; exit 1; }
+          [ "$URLS" -eq 106 ]   || { echo "❌ sitemap 应为 106，实际 $URLS"; exit 1; }
+          echo "✅ 数量核对通过"
+          echo "--- 今日星象 ---"
+          grep -oE 'Sun in [A-Za-z]+|Moon in [A-Za-z]+' \
+            build/horoscope/libra/daily/index.html | head -2 | sed 's/^/   /'
+
+      - name: 确认 _DONOT_UPLOAD 未混入
+        run: |
+          if [ -e build/_DONOT_UPLOAD ]; then
+            echo "❌ build/ 里混进了 _DONOT_UPLOAD，中止"; exit 1
+          fi
+          if [ -e build/index.html.bak ]; then
+            echo "❌ build/ 里混进了 index.html.bak，中止"; exit 1
+          fi
+          echo "✅ 无多余文件"
+
+      - name: 部署到 Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_PROJECT: horoscopetools-com
+        run: |
+          npx --yes wrangler@3 pages deploy build \
+            --project-name="$CF_PROJECT" \
+            --branch=main --commit-dirty=true
+
+      - name: 部署后冒烟测试
+        run: |
+          set -euo pipefail
+          for u in / /sitemap.xml /zodiac-signs/ /zodiac-signs/libra/ \
+                   /horoscope/libra/daily/ /compatibility/ /compatibility/aries-libra/; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 "https://horoscopetools.com$u")
+            echo "  $code  $u"
+            [ "$code" = "200" ] || { echo "❌ $u 返回 $code"; exit 1; }
+          done
+          echo "✅ 线上冒烟通过"
+
+      - name: 记录失败
+        if: failure()
+        run: |
+          echo "## ❌ horoscopetools 每日重建/发布失败" >> "$GITHUB_STEP_SUMMARY"
+          echo "运行记录：${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> "$GITHUB_STEP_SUMMARY"
