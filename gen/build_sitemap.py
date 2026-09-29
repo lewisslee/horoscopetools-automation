@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 """生成 sitemap.xml + 校验脚本。"""
 import os, sys, re
+from datetime import date
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from signs_data import SIGNS
 
 import os as _os
 ROOT = _os.environ.get("SITE_ROOT", "/workspace/site-audit")
 SITE = "https://horoscopetools.com"
-DATE = "2026-09-27"
+DATE = date.today().isoformat()
 
 PAGES = [
     ("/", "1.0", "daily"),
@@ -50,8 +51,16 @@ _SIGNS = ["aries","taurus","gemini","cancer","leo","virgo",
           "libra","scorpio","sagittarius","capricorn","aquarius","pisces"]
 for _a, _b in itertools.combinations(_SIGNS, 2):
     PAGES.append((f"/compatibility/{_a}-{_b}/", "0.6", "monthly"))
-
 PAGES.append(("/natal-chart.html", "0.9", "monthly"))
+
+# Discover editorial guides so new pages cannot be omitted from the sitemap.
+_guides_root = os.path.join(ROOT, "guides")
+if os.path.isdir(_guides_root):
+    for _dirpath, _dirnames, _filenames in os.walk(_guides_root):
+        if "index.html" not in _filenames:
+            continue
+        _rel = os.path.relpath(_dirpath, ROOT).replace(os.sep, "/")
+        PAGES.append((f"/{_rel}/", "0.7", "monthly"))
 
 xml = ['<?xml version="1.0" encoding="UTF-8"?>',
        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
