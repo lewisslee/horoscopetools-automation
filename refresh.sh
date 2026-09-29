@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+python3 gen/build_stellium_signs.py
 # ─────────────────────────────────────────────────────────────
 # horoscopetools.com 每日重建
 #
