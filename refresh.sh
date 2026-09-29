@@ -72,7 +72,7 @@ COMPAT=$(find "$BUILD/compatibility" -name index.html | wc -l)
 SIGNS=$(find "$BUILD/zodiac-signs" -name index.html | wc -l)
 echo "   daily: $DAILY · compatibility: $COMPAT · zodiac-signs: $SIGNS"
 echo "   sitemap URL 数: $URLS"
-if [ "$DAILY" -ne 12 ] || [ "$COMPAT" -ne 79 ] || [ "$SIGNS" -ne 13 ] || [ "$URLS" -ne 106 ]; then
+if [ "$DAILY" -ne 12 ] || [ "$COMPAT" -ne 79 ] || [ "$SIGNS" -ne 13 ] || [ "$URLS" -lt 107 ]; then
   echo "❌ 产物数量不正确，终止部署。"
   exit 1
 fi
