@@ -50,7 +50,7 @@ jobs:
           [ "$DAILY" -eq 12 ] || { echo "❌ daily 应为 12，实际 $DAILY"; exit 1; }
           [ "$COMPAT" -eq 79 ] || { echo "❌ compatibility 应为 79，实际 $COMPAT"; exit 1; }
           [ "$SIGNS" -eq 13 ]  || { echo "❌ zodiac-signs 应为 13，实际 $SIGNS"; exit 1; }
-          [ "$URLS" -eq 106 ]   || { echo "❌ sitemap 应为 106，实际 $URLS"; exit 1; }
+          [ "$URLS" -ge 107 ]   || { echo "❌ sitemap 至少应为 107，实际 $URLS"; exit 1; }
           echo "✅ 数量核对通过"
           echo "--- 今日星象 ---"
           grep -oE 'Sun in [A-Za-z]+|Moon in [A-Za-z]+' \
@@ -80,7 +80,8 @@ jobs:
         run: |
           set -euo pipefail
           for u in / /sitemap.xml /zodiac-signs/ /zodiac-signs/libra/ \
-                   /horoscope/libra/daily/ /compatibility/ /compatibility/aries-libra/; do
+                   /horoscope/libra/daily/ /compatibility/ /compatibility/aries-libra/ \
+                   /guides/do-i-have-a-stellium/; do
             code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 "https://horoscopetools.com$u")
             echo "  $code  $u"
             [ "$code" = "200" ] || { echo "❌ $u 返回 $code"; exit 1; }
