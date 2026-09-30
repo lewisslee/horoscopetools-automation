@@ -115,7 +115,7 @@ def render(slug, d):
 <body><header class="wrap nav"><a class="brand" href="/">HOROSCOPE TOOLS</a><nav class="navlinks"><a href="/">Home</a><a href="/zodiac-signs/">Zodiac Signs</a><a href="/natal-chart.html">Natal Chart</a><a href="/compatibility/">Compatibility</a></nav></header>
 <section class="wrap hero"><div class="eyebrow">Stellium Guide · {d['name']}</div><h1>{escape(title)}</h1><div class="verdict"><b>VERDICT</b><p>{d['verdict']}</p></div><p class="meta">Published September 29, 2026 · Educational astrology guide</p></section>
 <main class="wrap"><h2>{d['question']}</h2><p>{d['answer']}</p>
-<h2>A real question behind the stereotype</h2><blockquote>“{d['quote']}”<cite><a href="{d['url']}" rel="nofollow noopener">{d['source']}</a></cite></blockquote><p>A public comment can identify a lived question, but it cannot prove an astrological rule. Use it as the question to test against the full chart, not as evidence that everyone with the placement behaves alike.</p>
+<h2>A real question behind the stereotype</h2><blockquote>“{d['quote']}”<cite><a href="{d['url']}" rel="nofollow noopener">{d['source']}</a></cite></blockquote>
 <h2>Read the planets, not just the sign</h2><p>{d['planets']}</p>
 <h2>A useful test</h2><p>{d['test']}</p><a class="cta" href="/natal-chart.html">Check my birth chart</a>
 <h2>One claim to reject</h2><p>{d['myth']}</p>
