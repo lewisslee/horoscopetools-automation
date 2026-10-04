@@ -83,7 +83,9 @@ jobs:
                    /horoscope/libra/daily/ /compatibility/ /compatibility/aries-libra/ \
                    /guides/do-i-have-a-stellium/ \
                    /guides/do-retrograde-planets-count-in-a-stellium/ \
-                   /guides/stellium-equal-vs-whole-sign-houses/; do
+                   /guides/stellium-equal-vs-whole-sign-houses/ \
+                   /guides/north-node-stellium-count/ \
+                   /guides/stellium-conjunction-chain-orb/; do
             code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 "https://horoscopetools.com$u")
             echo "  $code  $u"
             [ "$code" = "200" ] || { echo "❌ $u 返回 $code"; exit 1; }
