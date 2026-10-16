@@ -22,7 +22,7 @@ for first, second in itertools.combinations(SIGNS, 2):
 PAGES.append(("/natal-chart.html", "0.9", "monthly"))
 
 # Discover hand-authored editorial pages without duplicating generated sections.
-for collection in ("guides", "stellium", "composite-chart", "saturn-return-meaning", "lilith-placement", "north-node-sign", "chiron-placement", "north-node", "north-node-calculator"):
+for collection in ("guides", "stellium", "composite-chart", "saturn-return-meaning", "lilith-placement", "north-node-sign", "chiron-placement", "north-node", "north-node-calculator", "chiron-calculator"):
     collection_root = os.path.join(ROOT, collection)
     if not os.path.isdir(collection_root):
         continue
