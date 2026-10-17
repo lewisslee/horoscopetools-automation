@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Composite Natal Chart Calculator | HoroscopeTools</title>
+  <meta name="description" content="Calculate a composite natal chart from two birth date, time, and UTC offset records directly in your browser.">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="/">Horoscope<span>Tools</span></a><span class="edition">RELATIONSHIP TOOLS / 01</span></header>
+<main>
+  <div class="heading"><div><p class="eyebrow">COMPOSITE NATAL CHART</p><h1>Composite Natal Chart Calculator</h1></div><a class="text-link" href="#method">Calculation method ↗</a></div>
+  <div class="workspace">
+    <section class="input-panel" aria-labelledby="details-title">
+      <div class="section-title"><span class="step">01</span><h2 id="details-title">Two birth records</h2></div>
+      <form id="calculator-form" novalidate>
+        <fieldset><legend>Person A</legend><div class="pair"><label>Birth date<input id="a-date" type="date" min="1800-01-01" max="2399-12-31" required></label><label>Birth time<input id="a-time" type="time" required></label></div><label>UTC offset at birth<input id="a-offset" type="number" inputmode="decimal" min="-14" max="14" step="any" placeholder="e.g. -5 or 5.5" required></label></fieldset>
+        <fieldset><legend>Person B</legend><div class="pair"><label>Birth date<input id="b-date" type="date" min="1800-01-01" max="2399-12-31" required></label><label>Birth time<input id="b-time" type="time" required></label></div><label>UTC offset at birth<input id="b-offset" type="number" inputmode="decimal" min="-14" max="14" step="any" placeholder="e.g. -5 or 5.5" required></label></fieldset>
+        <p class="hint">Use the offset that applied at each birth moment, including daylight saving time. This page does not look up places or time zones.</p>
+        <p id="form-error" class="error" role="alert" hidden></p>
+        <button id="calculate" class="primary" type="submit" disabled><span>Calculate composite chart</span><span aria-hidden="true">→</span></button>
+        <p class="local-note">Calculated in this browser. No birth details leave this page.</p>
+      </form>
+    </section>
+    <section class="result-panel" aria-labelledby="result-title">
+      <div class="section-title"><span class="step">02</span><h2 id="result-title">Composite result</h2><span id="engine-state" class="tag">LOADING MODEL</span></div>
+      <div id="result" aria-live="polite"><div class="empty-mark" aria-hidden="true">◌</div><h3 class="empty-title">The chart between two charts.</h3><p class="empty-copy">Enter complete birth records to calculate midpoints for the Sun through Pluto and list close major aspects.</p></div>
+      <button id="copy-result" class="copy" type="button" hidden>Copy result</button><p id="copy-status" class="copy-status" role="status"></p>
+    </section>
+  </div>
+  <section class="aspect-section"><p class="eyebrow">ASPECT REFERENCE</p><h2>How the major aspects are read</h2><div class="table-wrap"><table><thead><tr><th>Aspect</th><th>Angle</th><th>Working meaning</th></tr></thead><tbody><tr><td>Conjunction</td><td>0°</td><td>Two functions act from the same point and need a shared expression.</td></tr><tr><td>Sextile</td><td>60°</td><td>A usable opening that develops through choice and practice.</td></tr><tr><td>Square</td><td>90°</td><td>Friction that asks for adjustment, effort, or a new method.</td></tr><tr><td>Trine</td><td>120°</td><td>A fluent connection that can support ease, skill, or familiarity.</td></tr><tr><td>Opposition</td><td>180°</td><td>A polarity that becomes clearer through balance and response.</td></tr></tbody></table></div><p class="small-note">The results list only these five aspect types when their calculated separation is within a 3° orb. Astrology is a symbolic interpretation system, not a scientific method of prediction.</p></section>
+  <div class="notes"><section id="method"><p class="eyebrow">THE CALCULATION</p><h2>Midpoints, stated plainly.</h2><p>For each listed body, this calculator computes tropical geocentric longitude for both birth moments with a locally bundled Swiss Ephemeris model. It then takes the shortest-arc midpoint between those two longitudes. The result is a midpoint composite chart, not a Davison chart.</p><p>Dates from 1 January 1800 through 31 December 2399 are accepted. Birth time and UTC offset are required because the Moon can move substantially within a day. The tool does not calculate houses: those require a chosen place and house system, and this page deliberately does not infer either.</p><p>The bundled model runs locally in your browser. It does not send birth details to a server, use a preset date table, or query a city database.</p></section><section class="faq"><p class="eyebrow">COMMON QUESTIONS</p><h2>Use the result well.</h2><details open><summary>What is a composite natal chart?</summary><p>It is a symbolic relationship chart built from the midpoints between two natal-chart longitudes. This calculator shows the planetary midpoint layer and major aspects among those midpoint positions.</p></details><details><summary>Is this a Davison chart calculator?</summary><p>No. A Davison chart uses a midpoint in time and location. This page uses the midpoint composite method and states that distinction before you calculate.</p></details><details><summary>Why might another composite chart differ?</summary><p>Check both recorded birth times, the UTC offsets in force on the dates, the zodiac type, and whether the other page uses midpoint composite or Davison methodology.</p></details><details><summary>Where can I calculate an individual chart?</summary><p>Open the <a href="/natal-chart.html">natal chart calculator</a> for an individual chart before comparing two records.</p></details></section></div>
+</main>
+<footer><span>HoroscopeTools · A little more clarity.</span><nav aria-label="Footer"><a href="#privacy">Privacy</a><a href="#about">About</a><a href="/contact/">Contact</a><a href="#source">Source</a></nav></footer>
+<div class="legal"><section id="privacy"><h2>Privacy</h2><p>Birth details stay in this browser session. The page has no account, saved history, city lookup, or analytics request. Copy result writes only the displayed result to your clipboard when you choose it.</p></section><section id="about"><h2>About</h2><p>HoroscopeTools builds practical chart tools that state their method.</p></section><section id="source"><h2>Source</h2><p>The corresponding source is available in <a href="https://github.com/lewisslee/horoscopetools-automation">the public HoroscopeTools project repository</a> under the GNU Affero General Public License v3.0 or later, including the bundled engine and its license notices.</p></section></div>
+</body></html>
