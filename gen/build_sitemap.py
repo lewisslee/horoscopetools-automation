@@ -9,7 +9,7 @@ SITE = "https://horoscopetools.com"
 DATE = date.today().isoformat()
 SIGNS = ["aries","taurus","gemini","cancer","leo","virgo","libra","scorpio","sagittarius","capricorn","aquarius","pisces"]
 
-PAGES = [("/", "1.0", "daily"), ("/zodiac-signs/", "0.9", "weekly")]
+PAGES = [("/", "1.0", "daily"), ("/zodiac-signs/", "0.9", "weekly"), ("/chiron-calculator/", "0.7", "monthly"), ("/contact/", "0.4", "yearly")]
 for sign in SIGNS:
     PAGES.append((f"/zodiac-signs/{sign}/", "0.8", "weekly"))
 for sign in SIGNS:
@@ -21,7 +21,7 @@ for first, second in itertools.combinations(SIGNS, 2):
     PAGES.append((f"/compatibility/{first}-{second}/", "0.6", "monthly"))
 PAGES.append(("/natal-chart.html", "0.9", "monthly"))
 # Static calculator route: include explicitly so it remains in the sitemap even if the build copy changes.
-PAGES.append(("/chiron-calculator/", "0.7", "monthly"))
+
 
 # Discover hand-authored editorial pages without duplicating generated sections.
 for collection in ("guides", "stellium", "composite-chart", "saturn-return-meaning", "lilith-placement", "north-node-sign", "chiron-placement", "north-node", "north-node-calculator"):
