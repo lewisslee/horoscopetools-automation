@@ -20,10 +20,7 @@ for sign in SIGNS:
 for first, second in itertools.combinations(SIGNS, 2):
     PAGES.append((f"/compatibility/{first}-{second}/", "0.6", "monthly"))
 PAGES.append(("/natal-chart.html", "0.9", "monthly"))
-# Static calculator route: include explicitly so it remains in the sitemap even if the build copy changes.
-
-
-# Discover hand-authored editorial pages without duplicating generated sections.
+# Static editorial route: keep the freshly published Sagittarius guide explicit until the next full sitemap build confirms source discovery.`r`nPAGES.append(("/guides/chiron-in-sagittarius/", "0.7", "monthly"))`r`n`r`n# Discover hand-authored editorial pages without duplicating generated sections.
 for collection in ("guides", "stellium", "composite-chart", "saturn-return-meaning", "lilith-placement", "north-node-sign", "chiron-placement", "north-node", "north-node-calculator"):
     collection_root = os.path.join(ROOT, collection)
     if not os.path.isdir(collection_root):
@@ -34,8 +31,7 @@ for collection in ("guides", "stellium", "composite-chart", "saturn-return-meani
         rel = os.path.relpath(dirpath, ROOT).replace(os.sep, "/")
         PAGES.append((f"/{rel}/", "0.7", "monthly"))
 
-xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-for loc, priority, frequency in PAGES:
+seen = set()`r`nPAGES = [page for page in PAGES if not (page[0] in seen or seen.add(page[0]))]`r`n`r`nxml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']`r`nfor loc, priority, frequency in PAGES:
     xml.extend(["  <url>", f"    <loc>{SITE}{loc}</loc>", f"    <lastmod>{DATE}</lastmod>", f"    <changefreq>{frequency}</changefreq>", f"    <priority>{priority}</priority>", "  </url>"])
 xml.extend(["</urlset>", ""])
 out = os.path.join(ROOT, "sitemap.xml")
