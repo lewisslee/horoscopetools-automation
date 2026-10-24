@@ -994,4 +994,10 @@
     <loc>https://horoscopetools.com/guides/lilith-in-scorpio/</loc>
     <lastmod>2026-10-24</lastmod>
   </url>
+  <url>
+    <loc>https://horoscopetools.com/guides/lilith-in-aries/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
