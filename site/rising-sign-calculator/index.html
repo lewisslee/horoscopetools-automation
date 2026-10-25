@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rising Sign Calculator | Birth-Time Check | HoroscopeTools</title>
+  <meta name="description" content="Calculate your tropical Rising sign from birth date, time, UTC offset and coordinates, then compare two nearby birth times and copy a reproducible calculation receipt.">
+  <link rel="canonical" href="https://horoscopetools.com/rising-sign-calculator/">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="https://horoscopetools.com/">Horoscope<span>Tools</span></a>
+    <span class="edition">CHART TOOLS / RISING</span>
+  </header>
+  <main>
+    <div class="heading">
+      <div><p class="eyebrow">CALCULATE, THEN CHECK THE INPUT</p><h1>Rising Sign Calculator</h1></div>
+      <a class="text-link" href="#receipt">What the receipt keeps ↗</a>
+    </div>
+    <section class="workspace" aria-label="Rising sign calculator">
+      <section class="input-panel" aria-labelledby="details-title">
+        <div class="section-title"><span class="step">01</span><h2 id="details-title">Your birth details</h2></div>
+        <form id="calculator-form" novalidate>
+          <div class="pair"><label>Birth date<input id="birth-date" type="date" min="1800-01-01" max="2399-12-31" required></label><label>Birth time <span class="optional">optional</span><input id="birth-time" type="time" step="1"></label></div>
+          <p class="hint">A Rising sign needs a recorded birth time. If it is unknown, this page keeps that result unresolved rather than using noon.</p>
+          <label>Birth city <input id="birthplace" type="text" autocomplete="address-level2" placeholder="e.g. Greenwich, England" required></label>
+          <p class="hint">This is a private label. The calculator does not look up your city or transmit it.</p>
+          <div class="pair"><label>UTC offset at birth<input id="utc-offset" type="number" inputmode="decimal" min="-14" max="14" step="any" placeholder="e.g. -5 or 5.5" required></label><label>Latitude <span class="optional">for Rising sign</span><input id="latitude" type="number" inputmode="decimal" min="-89.9" max="89.9" step="any" placeholder="e.g. 51.4779"></label></div>
+          <label>Longitude <span class="optional">for Rising sign</span><input id="longitude" type="number" inputmode="decimal" min="-180" max="180" step="any" placeholder="e.g. 0.0015"></label>
+          <p class="hint">Use north/east as positive and south/west as negative. Enter the historical UTC offset, including daylight-saving time.</p>
+          <p id="form-error" class="error" role="alert" hidden></p>
+          <button id="calculate" class="primary" type="submit" disabled><span>Calculate and compare</span><span aria-hidden="true">→</span></button>
+          <p class="local-note">Calculated entirely in this browser. No birth details leave this page.</p>
+        </form>
+      </section>
+      <section class="result-panel" aria-labelledby="result-title">
+        <div class="section-title"><span class="step">02</span><h2 id="result-title">Your result</h2><span id="engine-state" class="tag">LOADING MODEL</span></div>
+        <div id="result" aria-live="polite"><div class="empty-mark" aria-hidden="true">↑</div><h3 class="empty-title">An Ascendant needs a moment and a place.</h3><p class="empty-copy">Enter a recorded birth time, UTC offset and coordinates to calculate the tropical Rising sign. The page will run a second check ten minutes later.</p><div class="result-key"><span>Ascendant sign + degree</span><span>Two-time comparison</span></div></div>
+        <button id="copy-result" class="copy" type="button" hidden>Copy calculation receipt</button><p id="copy-status" class="copy-status" role="status"></p>
+      </section>
+    </section>
+    <div class="notes">
+      <section id="method"><p class="eyebrow">THE ANSWER, WITH ITS LIMIT</p><h2>Your Rising sign is the zodiac sign on the eastern horizon at your recorded birth moment and location.</h2><p>It is not established by a Sun sign, a birth date alone, or a chart made without a reliable birth time. This calculator computes the tropical Placidus Ascendant locally with Swiss Ephemeris, then reports the Ascendant sign and degree.</p><h3>Three input states</h3><dl class="states"><div><dt>Can calculate</dt><dd>Date, recorded time, UTC offset, latitude and longitude are present.</dd></div><div><dt>Can record, not calculate</dt><dd>Date and city label are present but the time or coordinates are missing.</dd></div><div><dt>Needs checking</dt><dd>A recorded time is supplied, but the second run lands in a different sign within ten minutes.</dd></div></dl></section>
+      <section id="receipt"><p class="eyebrow">A RECEIPT YOU CAN RECHECK</p><h2>Keep the settings beside the result.</h2><p>Many chart wheels hide the inputs that determine an Ascendant. This page keeps the local time, UTC conversion, coordinate pair, tropical zodiac, Placidus horizon calculation, Julian day and exact longitude together in a copyable receipt.</p><p>The comparison is a sensitivity check, not a claim that every ten-minute change alters every chart. It shows whether the specific input you gave moves across a sign boundary within that interval.</p><h3>What to do with the comparison</h3><p>If both runs show the same sign, record that sign with the time used. If they differ, treat the sign as time-sensitive and check the birth record before interpreting it.</p></section>
+      <section class="faq"><p class="eyebrow">QUESTIONS BEFORE INTERPRETATION</p><h2>Use the output carefully.</h2><details open><summary>Can I find my Rising sign without a birth time?</summary><p>No. This page does not substitute noon for an unknown time because the Ascendant and houses depend on the horizon at the birth moment.</p></details><details><summary>Why does another Rising sign calculator disagree?</summary><p>Compare the recorded time, historical UTC offset, coordinates, zodiac type and house method. Keep the calculation receipt so that each setting can be checked instead of comparing labels alone.</p></details><details><summary>What is the difference between a Rising sign and a Sun sign?</summary><p>Your Sun sign is based on the Sun’s zodiac longitude. A Rising sign is the Ascendant on the eastern horizon, so it needs time and location as well as date.</p></details><details><summary>Where can I read a full chart?</summary><p>Use the <a href="/natal-chart.html">natal chart calculator</a> for a wider chart view after you have checked the birth inputs.</p></details></section>
+    </div>
+    <section class="related" aria-label="Related chart tools"><p class="eyebrow">NEXT, KEEP THE RECORD</p><p>For a full chart, open the <a href="/natal-chart.html">natal chart calculator</a>. For a placement whose house can change near the Ascendant, read the <a href="/guides/chiron-in-1st-house/">Chiron in the 1st house boundary check</a>.</p></section>
+  </main>
+  <footer><span>HoroscopeTools · A little more clarity.</span><nav aria-label="Footer"><a href="#privacy">Privacy</a><a href="#about">About</a><a href="/contact/">Contact</a></nav></footer>
+  <div class="legal"><section id="privacy"><h2>Privacy</h2><p>Birth details remain in this browser session. This page has no account, city lookup, saved history or data-submission request.</p></section><section id="about"><h2>About</h2><p>HoroscopeTools builds practical chart tools with calculation settings kept visible.</p></section></div>
+</body>
+</html>
