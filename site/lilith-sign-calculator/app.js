@@ -9,8 +9,8 @@ let copyText = '';
 function setState(text) { $('engine-state').textContent = text; }
 
 function hours(value) {
-  const [hour, minute] = value.split(':').map(Number);
-  return hour + minute / 60;
+  const [hour, minute, second = 0] = value.split(':').map(Number);
+  return hour + minute / 60 + second / 3600;
 }
 
 function formattedPlacement(longitude) {
@@ -34,7 +34,7 @@ function validate(values) {
   if (year < 1800 || year > 2399 || check.getUTCMonth() !== month - 1 || check.getUTCDate() !== day) throw new Error('Use a valid date from 1800 through 2399.');
   if (!values.birthplace.trim()) throw new Error('Enter a birth city label.');
   if (values.offset === '' || !Number.isFinite(Number(values.offset)) || Math.abs(Number(values.offset)) > 14) throw new Error('Enter the UTC offset at birth, between −14 and +14 hours.');
-  if (values.time && !/^([01]\d|2[0-3]):[0-5]\d$/.test(values.time)) throw new Error('Enter a valid birth time or leave it blank.');
+  if (values.time && !/^([01]\d|2[0-3]):[0-5]\d(?::[0-5]\d)?$/.test(values.time)) throw new Error('Enter a valid birth time or leave it blank.');
   return { year, month, day, offset: Number(values.offset), hasTime: Boolean(values.time) };
 }
 
