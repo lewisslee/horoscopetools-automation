@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lilith Sign Calculator | Mean and True Black Moon | HoroscopeTools</title>
+  <meta name="description" content="Calculate Mean and True Black Moon Lilith side by side in your browser, with sign, degree, and a clear model check.">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="https://horoscopetools.com/">Horoscope<span>Tools</span></a>
+    <span class="edition">CHART TOOLS / LILITH</span>
+  </header>
+
+  <main>
+    <div class="heading">
+      <div>
+        <p class="eyebrow">TWO BLACK MOON MODELS, ONE CHECK</p>
+        <h1>Lilith Sign Calculator</h1>
+      </div>
+      <a class="text-link" href="#method">How the models differ ↗</a>
+    </div>
+
+    <div class="workspace">
+      <section class="input-panel" aria-labelledby="details-title">
+        <div class="section-title"><span class="step">01</span><h2 id="details-title">Your birth details</h2></div>
+        <form id="calculator-form" novalidate>
+          <div class="pair">
+            <label>Birth date
+              <input id="birth-date" type="date" min="1800-01-01" max="2399-12-31" required>
+            </label>
+            <label>Birth time <span class="optional">optional</span>
+              <input id="birth-time" type="time">
+            </label>
+          </div>
+          <p class="hint">No recorded time? The calculation uses 12:00 noon at your stated UTC offset and labels the result as an estimate.</p>
+
+          <label>Birth city
+            <input id="birthplace" type="text" autocomplete="address-level2" placeholder="e.g. Greenwich, England" required>
+          </label>
+          <p class="hint">Your city remains a private label on this device. This page does not look it up or send it anywhere.</p>
+
+          <label>UTC offset at birth
+            <input id="utc-offset" type="number" inputmode="decimal" min="-14" max="14" step="any" placeholder="e.g. -5 or 5.5" required>
+          </label>
+          <p class="hint">Enter the offset that applied at birth, including daylight saving time. The sign calculation is geocentric, so city coordinates are not needed.</p>
+
+          <p id="form-error" class="error" role="alert" hidden></p>
+          <button id="calculate" class="primary" type="submit" disabled><span>Calculate both Lilith models</span><span aria-hidden="true">→</span></button>
+          <p class="local-note">Calculated entirely in this browser. No birth details leave this page.</p>
+        </form>
+      </section>
+
+      <section class="result-panel" aria-labelledby="result-title">
+        <div class="section-title"><span class="step">02</span><h2 id="result-title">Your result</h2><span id="engine-state" class="tag">LOADING MODEL</span></div>
+        <div id="result" aria-live="polite">
+          <div class="empty-mark" aria-hidden="true">⚸</div>
+          <h3 class="empty-title">Two labels, checked together.</h3>
+          <p class="empty-copy">Enter your birth details to calculate Mean Black Moon Lilith and True (osculating) Black Moon Lilith side by side.</p>
+          <div class="result-key"><span>Mean + True model</span><span>Sign + arcminutes</span></div>
+        </div>
+        <button id="copy-result" class="copy" type="button" hidden>Copy both results</button>
+        <p id="copy-status" class="copy-status" role="status"></p>
+      </section>
+    </div>
+
+    <div class="notes">
+      <section id="method">
+        <p class="eyebrow">THE CALCULATION</p>
+        <h2>One input, two named models.</h2>
+        <p>This lilith sign calculator runs a tropical, geocentric Swiss Ephemeris calculation locally in your browser. It reports the mean lunar apogee (<code>SE_MEAN_APOG</code>) and the osculating lunar apogee (<code>SE_OSCU_APOG</code>) at the same calculated UTC moment.</p>
+        <p>These are two Black Moon Lilith models, not two names for asteroid 1181 Lilith. A sign may agree in both outputs or differ near a sign boundary. The page shows both rather than silently choosing one.</p>
+        <h3>How to check what another chart service defaults to</h3>
+        <ol>
+          <li>Open the object list or settings in that service—not only the chart wheel.</li>
+          <li>If it says <strong>Mean Lilith</strong>, <strong>Mean Black Moon</strong>, or <strong>Mean Apogee</strong>, compare its degree with this page’s Mean result.</li>
+          <li>If it says <strong>True Lilith</strong>, <strong>Osculating Lilith</strong>, or <strong>Osculating Apogee</strong>, compare it with this page’s True result.</li>
+          <li>If it labels the point only <strong>Lilith</strong>, its default is not stated. Record the degree and check which of the two displayed results it matches.</li>
+        </ol>
+        <p>Dates from 1 January 1800 through 31 December 2399 are accepted. A missing birth time uses local noon as an estimate; use a recorded time when a result sits close to a sign boundary. A manually entered UTC offset is required because historical daylight-saving rules are not inferred.</p>
+      </section>
+
+      <section class="faq">
+        <p class="eyebrow">KEEP THE LABEL PRECISE</p>
+        <h2>Questions before interpretation.</h2>
+        <details open><summary>What is a black moon lilith calculator calculating?</summary><p>It calculates a lunar-apogee point, not a physical asteroid. This page gives both the Mean and True/osculating versions so you can identify the model behind a chart label.</p></details>
+        <details><summary>Why do two Lilith calculators show different signs?</summary><p>They can use different birth inputs, zodiac settings, or Black Moon models. Check the exact object label and degree before treating a sign difference as an error.</p></details>
+        <details><summary>Can I calculate Lilith without a birth time?</summary><p>Yes, this page uses noon at the UTC offset you enter and visibly marks the result as estimated. The model comparison still works, but a boundary case needs the recorded time.</p></details>
+        <details><summary>Is Black Moon Lilith the same as asteroid 1181 Lilith?</summary><p>No. Asteroid 1181 Lilith is a different object and is not calculated by this page.</p></details>
+      </section>
+    </div>
+
+    <section class="related" aria-label="Related Lilith guides">
+      <p class="eyebrow">READ A CONFIRMED RESULT</p>
+      <p>After you check the model, read <a href="/guides/lilith-in-scorpio/">Lilith in Scorpio</a> or <a href="/guides/lilith-in-capricorn/">Lilith in Capricorn</a> for sign-specific interpretation and reproducible model checks.</p>
+    </section>
+  </main>
+
+  <footer><span>HoroscopeTools · A little more clarity.</span><nav aria-label="Footer"><a href="#privacy">Privacy</a><a href="#about">About</a><a href="/contact/">Contact</a><a href="#source">Source</a></nav></footer>
+  <div class="legal">
+    <section id="privacy"><h2>Privacy</h2><p>Birth details remain in this browser session. The page has no account, city lookup, saved history, or data-submission request.</p></section>
+    <section id="about"><h2>About</h2><p>HoroscopeTools builds practical chart tools with the calculation settings kept visible.</p></section>
+    <section id="source"><h2>Source</h2><p>This local review page uses the same bundled Swiss Ephemeris WebAssembly runtime and ephemeris data as the local Chiron calculator. It is not a deployed production page.</p></section>
+  </div>
+</body>
+</html>
