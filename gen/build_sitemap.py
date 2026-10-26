@@ -9,7 +9,7 @@ SITE = "https://horoscopetools.com"
 DATE = date.today().isoformat()
 SIGNS = ["aries","taurus","gemini","cancer","leo","virgo","libra","scorpio","sagittarius","capricorn","aquarius","pisces"]
 
-PAGES = [("/", "1.0", "daily"), ("/zodiac-signs/", "0.9", "weekly"), ("/chiron-calculator/", "0.7", "monthly"), ("/lilith-sign-calculator/", "0.7", "monthly"), ("/rising-sign-calculator/", "0.8", "monthly"), ("/contact/", "0.4", "yearly"), ("/composite-natal-chart/", "0.7", "monthly")]
+PAGES = [("/", "1.0", "daily"), ("/zodiac-signs/", "0.9", "weekly"), ("/chiron-calculator/", "0.7", "monthly"), ("/lilith-sign-calculator/", "0.7", "monthly"), ("/rising-sign-calculator/", "0.8", "monthly"), ("/vedic-astrology-calculator/", "0.8", "monthly"), ("/contact/", "0.4", "yearly"), ("/composite-natal-chart/", "0.7", "monthly")]
 for sign in SIGNS:
     PAGES.append((f"/zodiac-signs/{sign}/", "0.8", "weekly"))
 for sign in SIGNS:

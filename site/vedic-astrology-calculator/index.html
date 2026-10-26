@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vedic Astrology Calculator | Lahiri Sidereal Chart | HoroscopeTools</title>
+  <meta name="description" content="Calculate a Lahiri sidereal Vedic chart baseline locally: seven planetary placements, optional sidereal Ascendant, exact longitudes and a copyable calculation receipt.">
+  <link rel="canonical" href="https://horoscopetools.com/vedic-astrology-calculator/">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">Horoscope<span>Tools</span></a>
+    <span class="edition">CHART TOOLS / VEDIC</span>
+  </header>
+  <main>
+    <div class="heading">
+      <div><p class="eyebrow">SIDEREAL BASELINE, SETTINGS VISIBLE</p><h1>Vedic Astrology Calculator</h1></div>
+      <a class="text-link" href="#method">What this calculation includes ↗</a>
+    </div>
+    <section class="workspace" aria-label="Vedic astrology calculator">
+      <section class="input-panel" aria-labelledby="details-title">
+        <div class="section-title"><span class="step">01</span><h2 id="details-title">Birth details</h2></div>
+        <form id="calculator-form" novalidate>
+          <div class="pair"><label>Birth date<input id="birth-date" type="date" min="1800-01-01" max="2399-12-31" required></label><label>Birth time <span class="optional">optional for planets</span><input id="birth-time" type="time" step="1"></label></div>
+          <p class="hint">If the time is unknown, this page uses 12:00 noon only for the planetary baseline and does not calculate a Lagna.</p>
+          <label>Birth city <span class="optional">private label</span><input id="birthplace" type="text" autocomplete="address-level2" placeholder="e.g. Chennai, India"></label>
+          <div class="pair"><label>UTC offset at birth<input id="utc-offset" type="number" inputmode="decimal" min="-14" max="14" step="any" placeholder="e.g. 5.5" required></label><label>Latitude <span class="optional">for Lagna</span><input id="latitude" type="number" inputmode="decimal" min="-89.9" max="89.9" step="any" placeholder="e.g. 13.0827"></label></div>
+          <label>Longitude <span class="optional">for Lagna</span><input id="longitude" type="number" inputmode="decimal" min="-180" max="180" step="any" placeholder="e.g. 80.2707"></label>
+          <p class="hint">Use north/east as positive and south/west as negative. Enter the historical UTC offset, including daylight-saving time when it applied.</p>
+          <p id="form-error" class="error" role="alert" hidden></p>
+          <button id="calculate" class="primary" type="submit" disabled><span>Calculate Lahiri placements</span><span aria-hidden="true">→</span></button>
+          <p class="local-note">Calculated in this browser. Birth details are not sent to this site.</p>
+        </form>
+      </section>
+      <section class="result-panel" aria-labelledby="result-title">
+        <div class="section-title"><span class="step">02</span><h2 id="result-title">Sidereal result</h2><span id="engine-state" class="tag">LOADING MODEL</span></div>
+        <div id="result" aria-live="polite"><div class="empty-mark" aria-hidden="true">✦</div><h3 class="empty-title">Your Lahiri placements will appear here.</h3><p class="empty-copy">Add a date and historical UTC offset for the seven visible planets. Add a recorded time and coordinates only when you also want a sidereal Ascendant.</p><div class="result-key"><span>Lahiri sidereal zodiac</span><span>Copyable settings receipt</span></div></div>
+        <button id="copy-result" class="copy" type="button" hidden>Copy calculation receipt</button><p id="copy-status" class="copy-status" role="status"></p>
+      </section>
+    </section>
+    <div class="notes">
+      <section id="method"><p class="eyebrow">THE ANSWER, WITH ITS SCOPE</p><h2>A Vedic chart starts with sidereal placements, but a full chart needs a recorded time and place.</h2><p>This tool calculates a Lahiri sidereal baseline for the Sun, Moon, Mercury, Venus, Mars, Jupiter and Saturn. With a recorded time, latitude and longitude, it also calculates a sidereal Ascendant. It does not create a Navamsha, Dasha or prediction report.</p><h3>Three input states</h3><dl class="states"><div><dt>Can calculate the baseline</dt><dd>Date and historical UTC offset are present. An unknown time uses noon and is labeled as an estimate.</dd></div><div><dt>Can calculate Lagna</dt><dd>A recorded time, latitude and longitude are also present.</dd></div><div><dt>Needs checking</dt><dd>The time is missing, the historical offset is uncertain, or coordinates are absent. Keep houses and Lagna unresolved.</dd></div></dl></section>
+      <section><p class="eyebrow">WHAT TO CHECK AGAINST YOUR CHART SERVICE</p><h2>Compare settings before comparing labels.</h2><p>Open your existing chart service and look for its zodiac and ayanamsa settings. A service set to tropical zodiac, or to a sidereal ayanamsa other than Lahiri, can show different signs even when the birth inputs match. This page keeps “sidereal / Lahiri,” the UTC conversion and Julian day in the receipt so the calculation can be repeated rather than guessed from a label.</p><p>Planetary placements can be a useful date-level baseline. Houses and Lagna are not: they depend on the horizon at a time and location, so this tool leaves them blank if that information is missing.</p></section>
+      <section class="faq"><p class="eyebrow">QUESTIONS BEFORE INTERPRETATION</p><h2>Use the result without silently changing the model.</h2><details open><summary>What is this Vedic astrology calculator calculating?</summary><p>It calculates seven geocentric planetary longitudes in the Lahiri sidereal zodiac. With time and coordinates, it also calculates a sidereal Ascendant.</p></details><details><summary>Why does another Vedic chart show a different sign?</summary><p>First compare birth time, historical UTC offset, coordinates, zodiac type and ayanamsa. A different setting changes the calculation itself; it is not merely a different interpretation.</p></details><details><summary>Can I calculate a Vedic chart without a birth time?</summary><p>You can see a noon-estimated planetary baseline, but not a reliable Lagna or house result. Keep those fields unresolved until the birth time and coordinates are available.</p></details><details><summary>Does this calculate nakshatras or Dasha?</summary><p>No. This page deliberately stops at the visible sidereal baseline and its receipt rather than presenting uncalculated advanced-chart results.</p></details></section>
+    </div>
+    <section class="related" aria-label="Related chart tools"><p class="eyebrow">NEXT, KEEP THE SETTINGS</p><p>For a tropical horizon check, use the <a href="/rising-sign-calculator/">rising sign calculator</a>. For a broader chart view, open the <a href="/natal-chart.html">natal chart calculator</a>.</p></section>
+  </main>
+  <footer><span>HoroscopeTools · A little more clarity.</span><nav aria-label="Footer"><a href="#privacy">Privacy</a><a href="#about">About</a><a href="/contact/">Contact</a></nav></footer>
+  <div class="legal"><section id="privacy"><h2>Privacy</h2><p>Birth details remain in this browser session. This page has no account, city lookup, saved history or data-submission request.</p></section><section id="about"><h2>About</h2><p>HoroscopeTools builds practical chart tools with calculation settings kept visible.</p></section></div>
+</body>
+</html>
