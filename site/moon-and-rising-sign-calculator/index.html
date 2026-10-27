@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moon and Rising Sign Calculator | HoroscopeTools</title>
+  <meta name="description" content="Calculate your tropical Moon and Rising signs from recorded birth details. If your birth time is unknown, see exactly which results can and cannot be confirmed.">
+  <link rel="canonical" href="https://horoscopetools.com/moon-and-rising-sign-calculator/">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="/">Horoscope<span>Tools</span></a><span>BIG THREE / MOON + RISING</span></header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">A RESULT THAT SHOWS ITS LIMIT</p>
+      <h1>Moon and Rising Sign Calculator</h1>
+      <p class="answer">Your Moon sign can sometimes be checked across a whole birth date; your Rising sign cannot be confirmed without a recorded time and coordinates. Enter what you have, and this calculator will separate a confirmed result from an unresolved one.</p>
+    </section>
+    <section class="workspace" aria-label="Moon and Rising sign calculator">
+      <form id="calculator-form" class="input-panel" novalidate>
+        <div class="section-head"><span>01</span><h2>Birth details</h2><b id="engine-state">LOADING MODEL</b></div>
+        <label>Birth date<input id="birth-date" type="date" min="1800-01-01" max="2399-12-31" required></label>
+        <div class="pair"><label>Birth time <em>optional</em><input id="birth-time" type="time" step="1"></label><label>UTC offset at birth<input id="utc-offset" type="number" min="-14" max="14" step="any" inputmode="decimal" placeholder="e.g. -5" required></label></div>
+        <label>Birth city <em>private label</em><input id="birthplace" type="text" autocomplete="address-level2" placeholder="e.g. Greenwich, England" required></label>
+        <p class="hint">This page does not look up a city or send this label anywhere. Use the historical UTC offset at the birth moment.</p>
+        <div class="pair"><label>Latitude <em>for Rising</em><input id="latitude" type="number" min="-89.9" max="89.9" step="any" inputmode="decimal" placeholder="e.g. 51.4779"></label><label>Longitude <em>for Rising</em><input id="longitude" type="number" min="-180" max="180" step="any" inputmode="decimal" placeholder="e.g. 0.0015"></label></div>
+        <p class="hint">North/east are positive; south/west are negative. Leave time or coordinates blank only if they are not recorded.</p>
+        <p id="form-error" class="error" hidden></p>
+        <button id="calculate" type="submit" disabled>Calculate Moon and Rising <span>→</span></button>
+        <p class="private">Runs locally in this browser. No sign-up, name, email, saved history, or data upload.</p>
+      </form>
+      <section class="result-panel" aria-labelledby="result-title"><div class="section-head"><span>02</span><h2 id="result-title">Your result</h2></div><div id="result" aria-live="polite"><p class="placeholder-mark">☾</p><h3>Enter the record you actually have.</h3><p>The result will show whether the Moon and Rising signs are calculated, bounded, or unresolved.</p></div><button id="copy-result" type="button" hidden>Copy calculation receipt</button><p id="copy-status" role="status"></p></section>
+    </section>
+    <section class="three-states">
+      <div><p class="eyebrow">WHEN TIME IS MISSING</p><h2>Do not turn an incomplete record into a confident label.</h2></div>
+      <div class="state-grid"><article><h3>Moon stays in one sign</h3><p>This page checks the first and last local minute of the date. If both return the same sign, the Moon result is date-stable for that offset.</p></article><article><h3>Moon changes sign that day</h3><p>The page lists both signs and keeps the Moon unresolved until a recorded time is available.</p></article><article><h3>Rising sign</h3><p>The Ascendant remains unresolved without a time, UTC offset, latitude, and longitude. Noon is never substituted.</p></article></div>
+    </section>
+    <section class="method"><div><p class="eyebrow">WHY SERVICES DISAGREE</p><h2>Check what the result actually required.</h2></div><div><p>Some Big Three tools collect a name, city, and exact time before they reveal anything. Others allow a no-time entry but limit the output. Neither form alone tells you whether a label is established. The useful distinction is whether the calculation gives the same Moon sign across the date and whether the recorded moment is sufficient for the horizon calculation.</p><p>This page shows that distinction beside the result, using a tropical zodiac, Swiss Ephemeris planetary positions, and a Placidus Ascendant when the required inputs exist.</p></div>
+    </section>
+    <section class="faq"><p class="eyebrow">DIRECT ANSWERS</p><h2>Before you interpret the Big Three</h2><details open><summary>Can I find my Moon and Rising signs without a birth time?</summary><p>You may be able to confirm the Moon if it stays in one sign for your whole local birth date; a Rising sign still needs a recorded time, UTC offset, and coordinates.</p></details><details><summary>Why is a city field not enough for a Rising sign?</summary><p>A city name is not a calculation setting. The Ascendant needs coordinates and the historical UTC offset, as well as a time.</p></details><details><summary>Does this replace a full birth chart?</summary><p>No. Use the <a href="/natal-chart.html">natal chart calculator</a> for a broader chart view after checking the birth inputs.</p></details></section>
+    <section class="related"><p class="eyebrow">KEEP THE INPUT VISIBLE</p><p>Need to test whether two nearby times change your Ascendant? Use the <a href="/rising-sign-calculator/">Rising Sign Calculator</a> for a reproducible ten-minute comparison.</p></section>
+  </main>
+  <footer><span>HoroscopeTools · Calculation settings kept visible.</span><nav><a href="/privacy/">Privacy</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav></footer>
+</body>
+</html>
