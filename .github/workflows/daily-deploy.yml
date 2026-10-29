@@ -1,6 +1,9 @@
 name: 每日重建并发布 horoscopetools.com
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     # GitHub Actions 用 UTC。23:17 UTC = 次日 07:17 北京时间
     - cron: "17 23 * * *"
