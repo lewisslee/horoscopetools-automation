@@ -13,3 +13,11 @@
 3. **Material bank:** consumed two approved batch intents—`synastry chart calculator` and `star chart calculator`—and recorded the next candidate audit as `placidus vs whole sign`; no new keyword volume or difficulty was asserted.
 4. **Question/answer:** added four direct-answer FAQ pairs to each guide, including exact-time, missing-time, comparison-scope and saved-input questions.
 5. **Visual:** created and embedded original `site/assets/star-chart-reading-order.svg` in the star-chart guide. No video was published or claimed.
+
+# 2026-11-01 — birth-chart cycle
+
+1. **Interface:** added two responsive answer-first guides with compact mobile layouts and source-record-first page flow.
+2. **Competitor constraint:** kept the fixed three benchmark domains as the structural reference; no benchmark copy was reused.
+3. **Material bank:** used two approved batch terms—`free birth chart calculator` and `find my birth chart`; Chrome Step7 reading was unavailable in this run and no snippets were used as substitute evidence.
+4. **Question/answer:** added four direct-answer FAQ pairs on each guide, including unknown time, city choice and calculator disagreement.
+5. **Visual/video:** no additional visual or public video was produced; this is recorded as a gap rather than claimed as completed.
