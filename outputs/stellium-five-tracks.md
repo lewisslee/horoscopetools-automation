@@ -21,3 +21,11 @@
 3. **Material bank:** used two approved batch terms—`free birth chart calculator` and `find my birth chart`; Chrome Step7 reading was unavailable in this run and no snippets were used as substitute evidence.
 4. **Question/answer:** added four direct-answer FAQ pairs on each guide, including unknown time, city choice and calculator disagreement.
 5. **Visual/video:** no additional visual or public video was produced; this is recorded as a gap rather than claimed as completed.
+
+# 2026-11-02 — birth-chart cycle
+
+1. **Interface:** published two distinct responsive page patterns: a paired-input comparison for Sun/Moon and a map-coordinate reading flow for astrocartography.
+2. **Competitor constraint:** retained the fixed benchmark set and did not copy any source text or assert current rankings.
+3. **Material bank:** used approved intents `sun and moon sign calculator` and `astrocartography calculator`; Chrome Step7 access was unavailable, so no search snippets were used as a substitute.
+4. **Question/answer:** added four direct answer pairs on each page, focused on missing time, location, calculator disagreement and scope.
+5. **Visual:** created and embedded original `site/assets/sun-moon-input-map.svg` in the Sun and Moon guide. No video was published or claimed.
