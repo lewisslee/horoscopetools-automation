@@ -29,3 +29,11 @@
 3. **Material bank:** used approved intents `sun and moon sign calculator` and `astrocartography calculator`; Chrome Step7 access was unavailable, so no search snippets were used as a substitute.
 4. **Question/answer:** added four direct answer pairs on each page, focused on missing time, location, calculator disagreement and scope.
 5. **Visual:** created and embedded original `site/assets/sun-moon-input-map.svg` in the Sun and Moon guide. No video was published or claimed.
+
+# 2026-11-03 — birth-chart cycle
+
+1. **Interface:** added compact, responsive calculator-guide layouts with different visual structures for sign verification and two-record comparison.
+2. **Competitor constraint:** retained the fixed benchmark set; no competitor prose was reused.
+3. **Material bank:** used approved terms `zodiac calculator` and `astrology compatibility calculator`; Chrome Step7 audit was unavailable and no snippets were substituted.
+4. **Question/answer:** each new guide includes four direct-answer questions covering source record, uncertainty and scope.
+5. **Visual/video:** no separate visual or public video was completed; recorded as incomplete rather than claimed.
