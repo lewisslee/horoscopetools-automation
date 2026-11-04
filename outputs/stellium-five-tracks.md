@@ -37,3 +37,11 @@
 3. **Material bank:** used approved terms `zodiac calculator` and `astrology compatibility calculator`; Chrome Step7 audit was unavailable and no snippets were substituted.
 4. **Question/answer:** each new guide includes four direct-answer questions covering source record, uncertainty and scope.
 5. **Visual/video:** no separate visual or public video was completed; recorded as incomplete rather than claimed.
+
+# 2026-11-05 — birth-chart cycle
+
+1. **Interface:** built two distinct responsive record-first layouts: a four-status rising-sign confidence ladder and a two-record compatibility receipt.
+2. **Competitor constraint:** kept the fixed benchmark domains; no benchmark prose was reused.
+3. **Material bank:** used the remaining approved intents `find your/find my rising sign` (one page) and `birth chart compatibility calculator`; Chrome Step7 was unavailable because the browser connection failed, and no snippets were used as a substitute.
+4. **Question/answer:** added four direct-answer FAQ pairs to each guide, covering missing or approximate times, record disagreement, scope and method labels.
+5. **Visual/video:** no additional visual or public video was completed; recorded as incomplete rather than claimed.
