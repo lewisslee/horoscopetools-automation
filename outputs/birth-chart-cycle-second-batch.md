@@ -4,7 +4,7 @@ Recorded 2026-11-05. Monthly volumes below are user-provided US 12-month average
 
 ## Queue rule
 
-Work one family at a time. When a family has no approved remaining terms, stop and move to the next family. Do not invent terms, split an approved intent, or use a later family early. Every page still requires the existing Step7/Step8 checks before publication.
+Work one family at a time. Finish or explicitly retire the active family before moving to the next; do not jump among families to cherry-pick terms. Do not invent terms, split an approved intent, or use a later family early. Every page still requires the existing Step7/Step8 checks before publication. Real mobile verification is the owner’s external mobile-data check; do not substitute desktop responsive CSS, browser extension state, or an emulator and do not report it as completed unless the owner confirms it.
 
 ## 1. Rising-sign pages — first active family
 
@@ -69,4 +69,4 @@ One aspects-family page combines `astrology aspects` (1,900), `conjunction astro
 
 ## Pre-audit only — do not publish yet
 
-Evaluate shared domains and first-page final-result viability before adding pages for `fire signs` (50,000), `air signs` (74,000), and `zodiac elements` (9,900). `mercury retrograde` is not queued. `saturn return` is already served by the existing `saturn-return-meaning` page.
+Evaluate shared domains and inspect the final organic result on the first results page for viable volume before adding pages for `fire signs` (50,000), `air signs` (74,000), and `zodiac elements` (9,900). These are position audits, not pages. If the final first-page result has no viable volume, retire the elements family and move directly to the next family—do not rewrite or retry alternate element terms. `mercury retrograde` is not queued. `saturn return` is already served by the existing `saturn-return-meaning` page.
