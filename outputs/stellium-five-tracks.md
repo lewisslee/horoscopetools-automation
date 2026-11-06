@@ -45,3 +45,9 @@
 3. **Material bank:** used the remaining approved intents `find your/find my rising sign` (one page) and `birth chart compatibility calculator`; Chrome Step7 was unavailable because the browser connection failed, and no snippets were used as a substitute.
 4. **Question/answer:** added four direct-answer FAQ pairs to each guide, covering missing or approximate times, record disagreement, scope and method labels.
 5. **Visual/video:** no additional visual or public video was completed; recorded as incomplete rather than claimed.
+
+# 2026-11-06 — rising-sign family start blocked before Step7
+
+1. **Required SERP gate:** attempted the logged-in Chrome control path for the approved next keyword `pisces rising`. The browser-control runtime failed during initialization with the Windows error “system cannot find the path specified”; no US-English Google natural-result pages, snippets, or rankings were used.
+2. **Interface / competitor / material / Q&A / visual-video:** no page, interface change, competitor claim, source material, question-answer block, image, or video was produced. These lines are intentionally recorded as not completed rather than backfilled with unrelated work.
+3. **Next safe action:** restore the browser-control runtime, then read the actual ten US-English natural results in the logged-in Chrome before drafting or publishing the first rising-sign page.
