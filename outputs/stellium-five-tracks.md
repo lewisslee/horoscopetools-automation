@@ -51,3 +51,11 @@
 1. **Required SERP gate:** attempted the logged-in Chrome control path for the approved next keyword `pisces rising`. The browser-control runtime failed during initialization with the Windows error “system cannot find the path specified”; no US-English Google natural-result pages, snippets, or rankings were used.
 2. **Interface / competitor / material / Q&A / visual-video:** no page, interface change, competitor claim, source material, question-answer block, image, or video was produced. These lines are intentionally recorded as not completed rather than backfilled with unrelated work.
 3. **Next safe action:** restore the browser-control runtime, then read the actual ten US-English natural results in the logged-in Chrome before drafting or publishing the first rising-sign page.
+
+# 2026-11-07 — rising-sign family recovery
+
+1. **Interface:** drafted two distinct responsive, answer-first layouts for Leo Rising (a three-step visibility map) and Virgo Rising (a four-stage decision log). Both collapse to one column on narrow screens.
+2. **Competitor observation:** logged-in Chrome results and direct page reads show the recurring pattern of trait lists plus a chart-ruler qualifier. The drafts do not reuse competitor wording; Leo turns visibility into a contribution check, while Virgo limits observation with a defined stopping point.
+3. **Material bank:** the approved queue supplied `leo rising` and `virgo rising`; no new volume, difficulty, or invented long-tail term was used.
+4. **Question/answer:** each draft contains three direct-answer questions covering Sun/Mercury distinction, broad descriptions, and the birth-time limit.
+5. **Visual/video:** no separate image or public video was created. This remains a recorded gap, not a claimed deliverable.
