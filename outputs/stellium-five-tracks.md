@@ -59,3 +59,11 @@
 3. **Material bank:** the approved queue supplied `leo rising` and `virgo rising`; no new volume, difficulty, or invented long-tail term was used.
 4. **Question/answer:** each draft contains three direct-answer questions covering Sun/Mercury distinction, broad descriptions, and the birth-time limit.
 5. **Visual/video:** no separate image or public video was created. This remains a recorded gap, not a claimed deliverable.
+
+# 2026-11-08 — Leo and Virgo Rising published
+
+1. **Interface:** deployed two distinct, responsive answer-first layouts and verified their public HTML delivery; mobile review remains assigned to the owner’s real phone connection.
+2. **Competitor observation:** retained direct source notes from the logged-in Chrome review without reusing source text; the Leo and Virgo pages use different reader actions rather than a repeated trait-list structure.
+3. **Material bank:** advanced only the approved rising-sign queue terms `leo rising` and `virgo rising`; no volume or difficulty figures were added.
+4. **Question/answer:** each published guide contains three independent direct-answer FAQ pairs and links back to the rising-sign calculation record.
+5. **Visual/video:** no new image or publicly released video was produced today; this is logged as incomplete rather than counted as an output.
