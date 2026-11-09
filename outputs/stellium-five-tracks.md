@@ -67,3 +67,11 @@
 3. **Material bank:** advanced only the approved rising-sign queue terms `leo rising` and `virgo rising`; no volume or difficulty figures were added.
 4. **Question/answer:** each published guide contains three independent direct-answer FAQ pairs and links back to the rising-sign calculation record.
 5. **Visual/video:** no new image or publicly released video was produced today; this is logged as incomplete rather than counted as an output.
+
+# 2026-11-09 — Libra and Sagittarius Rising published
+
+1. **Interface:** released two responsive, answer-first layouts with different practical structures: a three-part balance card and a claim-range check.
+2. **Competitor observation:** read ten current organic bodies for each approved term through the permitted public-reader fallback after the Chrome bridge failed; no snippets or competitor prose were used.
+3. **Material bank:** advanced only the next two approved rising-sign terms, `libra rising` and `sagittarius rising`.
+4. **Question/answer:** each guide includes three standalone direct-answer questions on the Ascendant, broad trait claims, and birth-time uncertainty.
+5. **Visual/video:** no image or public video was completed today; this remains explicitly incomplete.
