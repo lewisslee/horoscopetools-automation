@@ -75,3 +75,11 @@
 3. **Material bank:** advanced only the next two approved rising-sign terms, `libra rising` and `sagittarius rising`.
 4. **Question/answer:** each guide includes three standalone direct-answer questions on the Ascendant, broad trait claims, and birth-time uncertainty.
 5. **Visual/video:** no image or public video was completed today; this remains explicitly incomplete.
+
+# 2026-11-12 — Gemini and Capricorn Rising
+
+1. **Interface:** created two distinct mobile-responsive answer-first layouts: Gemini uses an Open / Switch / Return conversation trace; Capricorn uses a Role / Cost / Choice responsibility ledger.
+2. **Competitor observation:** read public source bodies for Gemini and Capricorn interpretations, including [Astrology.com’s Ascendant guide](https://www.astrology.com/article/ascendant-meaning-astrology/), [Cafe Astrology’s Gemini page](https://cafeastrology.com/gemini_ascendantrisingsign.html), and [Cafe Astrology’s Capricorn page](https://cafeastrology.com/capricorn_ascendantrisingsign.html). The Chrome bridge listed tabs but could not attach its page debugger, so no search snippets were used as evidence.
+3. **Material bank:** advanced only the next two approved rising-family intents, `gemini rising` and `capricorn rising`; tomorrow’s candidates remain Taurus and Cancer Rising.
+4. **Question/answer:** added three standalone direct-answer FAQ pairs to each new guide, covering Sun distinction, trait overreach and birth-time uncertainty.
+5. **Visual/video:** no new image or public video was completed; this remains incomplete rather than claimed.
