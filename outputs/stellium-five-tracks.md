@@ -91,3 +91,11 @@
 3. **Question/answer:** each draft includes three direct-answer FAQ pairs and a specific birth-time limitation.
 4. **Visual/video:** no new image or public video was completed; this is not counted as complete.
 5. **Publication state:** held for the required public-body SERP audit and two existing contextual body inlinks; Chrome’s attached-page reader remains unavailable.
+
+# 2026-11-14 — Aquarius and Aries Rising
+
+1. **Interface:** added two distinct answer-first layouts: Aquarius uses a Map / Choose / Connect system check; Aries uses a Start / Check / Commit first-move note. Both retain responsive single-column rendering on narrow screens.
+2. **Competitor observation:** read public source bodies for Aquarius and Aries through the permitted bridge-failure fallback, including Astrology.com’s dedicated Ascendant pages and Cafe Astrology’s Aquarius and Aries Ascendant pages. No search snippet was used as article evidence.
+3. **Material bank:** completed the final two approved rising-family intents, `aquarius rising` and `aries rising`; the next family is houses and remains subject to its shared-domain gate.
+4. **Question/answer:** added three standalone direct-answer FAQs to each guide, including a direct birth-time uncertainty answer.
+5. **Visual/video:** no image or public video was completed; this remains incomplete rather than claimed.
