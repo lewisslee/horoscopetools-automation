@@ -83,3 +83,11 @@
 3. **Material bank:** advanced only the next two approved rising-family intents, `gemini rising` and `capricorn rising`; tomorrow’s candidates remain Taurus and Cancer Rising.
 4. **Question/answer:** added three standalone direct-answer FAQ pairs to each new guide, covering Sun distinction, trait overreach and birth-time uncertainty.
 5. **Visual/video:** no new image or public video was completed; this remains incomplete rather than claimed.
+
+# 2026-11-13 — Taurus and Cancer Rising drafts
+
+1. **Interface:** created distinct answer-first mobile layouts: Taurus uses Settle / Value / Move, while Cancer uses Notice / Protect / Share.
+2. **Competitor / material:** retained the fixed benchmark constraint and the approved rising-family queue; no competitor prose, unapproved term, or volume estimate was added.
+3. **Question/answer:** each draft includes three direct-answer FAQ pairs and a specific birth-time limitation.
+4. **Visual/video:** no new image or public video was completed; this is not counted as complete.
+5. **Publication state:** held for the required public-body SERP audit and two existing contextual body inlinks; Chrome’s attached-page reader remains unavailable.
