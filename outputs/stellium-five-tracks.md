@@ -99,3 +99,11 @@
 3. **Material bank:** completed the final two approved rising-family intents, `aquarius rising` and `aries rising`; the next family is houses and remains subject to its shared-domain gate.
 4. **Question/answer:** added three standalone direct-answer FAQs to each guide, including a direct birth-time uncertainty answer.
 5. **Visual/video:** no image or public video was completed; this remains incomplete rather than claimed.
+
+# 2026-11-15 — 7th and 3rd House Astrology
+
+1. **Interface:** added two answer-first house guides with distinct practical interfaces: 7th House uses a Request / Response / Responsibility reciprocity check; 3rd House uses a Notice / Translate / Repeat exchange route.
+2. **Competitor observation:** public-body fallback was used because the logged-in Chrome reader remains unavailable. The preliminary shared-domain checks against the corresponding stellium SERPs were below the seven-domain gate; the pages deliberately distinguish whole-house meaning from a multi-planet concentration.
+3. **Material bank:** advanced only the first two approved house-family intents, `7th house astrology` and `3rd house astrology`; the next candidates remain the approved 6th and 9th house terms.
+4. **Question/answer:** each guide contains three direct-answer FAQ pairs, including the birth-time limitation required for house cusps.
+5. **Visual/video:** no image or public video was completed; this remains incomplete rather than claimed.
