@@ -107,3 +107,11 @@
 3. **Material bank:** advanced only the first two approved house-family intents, `7th house astrology` and `3rd house astrology`; the next candidates remain the approved 6th and 9th house terms.
 4. **Question/answer:** each guide contains three direct-answer FAQ pairs, including the birth-time limitation required for house cusps.
 5. **Visual/video:** no image or public video was completed; this remains incomplete rather than claimed.
+
+# 2026-11-16 — 6th and 9th House Astrology
+
+1. **Interface:** created distinct answer-first layouts: the 6th-house guide uses an Observe / Reduce / Support / Review routine loop, while the 9th-house guide uses a Source / Claim / Counterexample / Next study inquiry note.
+2. **Competitor observation:** used actual public page bodies through the approved bridge-failure fallback, including Tarot.com’s 6th-house guide and Cafe Astrology’s house overview. Preliminary common-domain checks against the matching stellium terms remained below the seven-domain gate; no snippets were treated as source material.
+3. **Material bank:** advanced only the next two approved house-family intents, `6th house astrology` and `9th house astrology`. The following queued candidates remain 11th and 2nd house astrology.
+4. **Question/answer:** each guide supplies three independent direct-answer FAQ pairs and limits claims where birth time changes house cusps.
+5. **Visual/video:** no image or public video was completed; this remains explicitly incomplete.
