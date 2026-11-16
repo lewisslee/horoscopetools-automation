@@ -115,3 +115,11 @@
 3. **Material bank:** advanced only the next two approved house-family intents, `6th house astrology` and `9th house astrology`. The following queued candidates remain 11th and 2nd house astrology.
 4. **Question/answer:** each guide supplies three independent direct-answer FAQ pairs and limits claims where birth time changes house cusps.
 5. **Visual/video:** no image or public video was completed; this remains explicitly incomplete.
+
+# 2026-11-17 — 11th and 2nd House Astrology
+
+1. **Interface:** created two distinct answer-first structures: the 11th-house guide uses a Purpose / Role / Boundary participation note; the 2nd-house guide uses an Available / Needed / Trade-off / Next record resource ledger.
+2. **Competitor observation:** read actual public bodies through the approved bridge-failure fallback, including current 11th- and 2nd-house pages from Cafe Astrology, Tarot.com, and other public sources. Preliminary common-domain checks against the corresponding stellium terms remained below the seven-domain gate; no search snippet was used as page evidence.
+3. **Material bank:** advanced only the next two approved house-family intents, `11th house astrology` and `2nd house astrology`. The following queued candidates remain 5th and 8th house astrology.
+4. **Question/answer:** each guide includes three direct-answer FAQs and keeps birth-time limitations visible for house cusps.
+5. **Visual/video:** no image or public video was completed; this remains explicitly incomplete.
