@@ -123,3 +123,11 @@
 3. **Material bank:** advanced only the next two approved house-family intents, `11th house astrology` and `2nd house astrology`. The following queued candidates remain 5th and 8th house astrology.
 4. **Question/answer:** each guide includes three direct-answer FAQs and keeps birth-time limitations visible for house cusps.
 5. **Visual/video:** no image or public video was completed; this remains explicitly incomplete.
+
+# 2026-11-18 — 5th and 8th House Astrology
+
+1. **Interface:** built two distinct answer-first layouts: 5th House uses an Offer / Risk / Return practice card; 8th House uses a Share / Terms / Exit commitment note. Both retain a one-column mobile layout without relying on it as mobile verification.
+2. **Competitor observation:** used actual public page bodies through the approved bridge-failure fallback, including current fifth- and eighth-house pages from Tarot.com, Cafe Astrology, Canopy and Astrologist.com. Preliminary shared-domain checks against the matching stellium terms remained below the seven-domain gate; no snippets were treated as page evidence.
+3. **Material bank:** advanced only the next two approved house-family intents, `5th house astrology` and `8th house astrology`. The following queued candidates remain 4th and 10th house astrology.
+4. **Question/answer:** each guide adds three standalone direct-answer FAQs and explicitly states the birth-time / cusp limitation; the 8th-house page also rules out predictive, legal, financial and consent claims.
+5. **Visual/video:** no image or public video was completed today; this remains explicitly incomplete rather than counted as an output.
