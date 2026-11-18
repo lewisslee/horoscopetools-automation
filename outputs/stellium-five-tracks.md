@@ -131,3 +131,11 @@
 3. **Material bank:** advanced only the next two approved house-family intents, `5th house astrology` and `8th house astrology`. The following queued candidates remain 4th and 10th house astrology.
 4. **Question/answer:** each guide adds three standalone direct-answer FAQs and explicitly states the birth-time / cusp limitation; the 8th-house page also rules out predictive, legal, financial and consent claims.
 5. **Visual/video:** no image or public video was completed today; this remains explicitly incomplete rather than counted as an output.
+
+# 2026-11-19 — 4th and 10th House Astrology
+
+1. **Interface:** built two distinct answer-first layouts: 4th House uses a Place / Pattern / Repair foundation map; 10th House uses a Role / Standard / Evidence public-work check. Both remain responsive without being claimed as a real-mobile test.
+2. **Competitor observation:** read actual public bodies through the permitted bridge-failure fallback, including current fourth- and tenth-house pages from Canopy, Elle, Moon Says and other public sources. Preliminary shared-domain checks against their matching stellium terms remained below the seven-domain gate; no snippets were used as page evidence.
+3. **Material bank:** advanced only the next two approved house-family intents, `4th house astrology` and `10th house astrology`. The following queued candidates remain 1st and 12th house.
+4. **Question/answer:** each guide adds three standalone direct-answer FAQs, keeps the birth-time limitation visible, and does not convert symbolic meanings into housing, career or family predictions.
+5. **Visual/video:** no image or public video was completed today; this is explicitly incomplete rather than counted as an output.
