@@ -139,3 +139,11 @@
 3. **Material bank:** advanced only the next two approved house-family intents, `4th house astrology` and `10th house astrology`. The following queued candidates remain 1st and 12th house.
 4. **Question/answer:** each guide adds three standalone direct-answer FAQs, keeps the birth-time limitation visible, and does not convert symbolic meanings into housing, career or family predictions.
 5. **Visual/video:** no image or public video was completed today; this is explicitly incomplete rather than counted as an output.
+
+# 2026-11-20 — 1st and 12th House Astrology
+
+1. **Interface:** built distinct answer-first layouts: 1st House uses a Signal / Choice / Revision first-contact check; 12th House uses a Withdraw / Notice / Re-enter preparation note. Both remain responsive without being claimed as a real-phone test.
+2. **Competitor observation:** read actual public bodies through the permitted bridge-failure fallback, including current first- and twelfth-house pages from Astro.com, Tarot.com, Templum Dianae and Astrologist.com. Preliminary shared-domain checks against matching stellium terms remained below the seven-domain gate; no snippets were used as page evidence.
+3. **Material bank:** completed the approved house-meaning family with `1st house astrology` and the exact approved term `12th house`. The next family is planet placements and remains subject to its separate comparison rule.
+4. **Question/answer:** each guide adds three standalone direct-answer FAQs, keeps the birth-time limitation visible, and states clear limits around diagnosis, safety and identity claims.
+5. **Visual/video:** no image or public video was completed today; this remains incomplete rather than claimed.
