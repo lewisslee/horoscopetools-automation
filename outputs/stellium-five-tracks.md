@@ -147,3 +147,11 @@
 3. **Material bank:** completed the approved house-meaning family with `1st house astrology` and the exact approved term `12th house`. The next family is planet placements and remains subject to its separate comparison rule.
 4. **Question/answer:** each guide adds three standalone direct-answer FAQs, keeps the birth-time limitation visible, and states clear limits around diagnosis, safety and identity claims.
 5. **Visual/video:** no image or public video was completed today; this remains incomplete rather than claimed.
+
+# 2026-11-21 — Venus Sign and Mercury Sign
+
+1. **Interface:** built two distinct answer-first placement layouts: Venus uses an Attract / Value / Reciprocate exchange check; Mercury uses a Notice / Translate / Confirm communication check. Both remain responsive without being claimed as real-phone verification.
+2. **Competitor observation:** read actual public bodies through the bridge-failure fallback and compared the placement queries with existing Chiron and Lilith placement work. Shared-domain overlap remained below the separate seven-domain gate; no snippets were used as page evidence.
+3. **Material bank:** began only the approved planet-placement family with `venus sign` and `mercury sign`; the next candidates remain Mars and Jupiter sign.
+4. **Question/answer:** each page contains three standalone direct-answer FAQs and explicit limits against relationship prediction, intelligence scoring and identity stereotypes.
+5. **Visual/video:** no image or public video was completed today; this is explicitly incomplete rather than counted as output.
