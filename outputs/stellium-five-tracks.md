@@ -155,3 +155,11 @@
 3. **Material bank:** began only the approved planet-placement family with `venus sign` and `mercury sign`; the next candidates remain Mars and Jupiter sign.
 4. **Question/answer:** each page contains three standalone direct-answer FAQs and explicit limits against relationship prediction, intelligence scoring and identity stereotypes.
 5. **Visual/video:** no image or public video was completed today; this is explicitly incomplete rather than counted as output.
+
+# 2026-11-22 — Mars Sign and Jupiter Sign
+
+1. **Interface:** built distinct answer-first placement layouts: Mars uses Start / Friction / Repair; Jupiter uses Learn / Test / Share. Both remain responsive without being claimed as real-phone verification.
+2. **Competitor observation:** read actual public bodies through the bridge-failure fallback and completed the required comparison with Chiron/Lilith placement queries. Shared-domain overlap remained below the seven-domain gate; no snippets were used as page evidence.
+3. **Material bank:** advanced only approved planet-placement intents `mars sign` and `jupiter sign`; the next candidates remain Saturn and Pluto sign.
+4. **Question/answer:** each guide includes three direct-answer FAQs and limits against conflict prediction, luck promises and decision-making claims.
+5. **Visual/video:** no image or public video was completed; this remains explicitly incomplete.
