@@ -163,3 +163,11 @@
 3. **Material bank:** advanced only approved planet-placement intents `mars sign` and `jupiter sign`; the next candidates remain Saturn and Pluto sign.
 4. **Question/answer:** each guide includes three direct-answer FAQs and limits against conflict prediction, luck promises and decision-making claims.
 5. **Visual/video:** no image or public video was completed; this remains explicitly incomplete.
+
+# 2026-11-23 — Saturn Sign and Pluto Sign
+
+1. **Interface:** built distinct answer-first placement layouts: Saturn uses Limit / Practice / Review; Pluto uses Generation / Context / Choice. Neither is claimed as real-phone verification.
+2. **Competitor observation:** read public bodies through the approved bridge-failure fallback and completed the Chiron/Lilith placement comparison; shared-domain overlap remained below the seven-domain gate.
+3. **Material bank:** advanced only approved terms `saturn sign` and `pluto sign`; the next candidates remain Neptune and Uranus sign.
+4. **Question/answer:** each guide includes three direct answers and rejects hardship, trauma, luck or destiny claims.
+5. **Visual/video:** no image or public video was completed; this remains incomplete.
