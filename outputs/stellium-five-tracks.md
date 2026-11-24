@@ -171,3 +171,11 @@
 3. **Material bank:** advanced only approved terms `saturn sign` and `pluto sign`; the next candidates remain Neptune and Uranus sign.
 4. **Question/answer:** each guide includes three direct answers and rejects hardship, trauma, luck or destiny claims.
 5. **Visual/video:** no image or public video was completed; this remains incomplete.
+
+# 2026-11-24 — Neptune Sign and Uranus Sign
+
+1. **Interface:** created two distinct answer-first layouts: Neptune uses an Imagine / Boundary / Calibrate check; Uranus uses a Disrupt / Test / Integrate check. Neither layout is represented as a real-phone test.
+2. **Competitor observation:** Browser Use could not start because its project has insufficient credits. Per the approved fallback, actual public page bodies—not snippets—were reviewed for Neptune and Uranus pages, including Cafe Astrology, Umbriel, Astrology Geeks, NatalCalc and current explanatory pages. The Chiron/Lilith placement comparison remains below the seven-domain gate; the Chrome-specific audit could not run.
+3. **Material bank:** completed the final approved planet-placement intents, `neptune sign` and `uranus sign`. The next approved family is the combined Moon-sign page, subject to its queue rules.
+4. **Question/answer:** each guide adds three direct answers and keeps natal/transit, precise-boundary, birth-time and high-stakes decision limits explicit.
+5. **Visual/video:** no image or public video was completed today; this remains incomplete rather than counted as output.
